@@ -1,0 +1,170 @@
+.problem {
+  position: relative;
+  overflow: hidden;
+}
+
+.problem__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 700px;
+}
+
+.problem__content {
+  background: #ffffff;
+  padding: 80px 60px;
+  color: #000;
+}
+
+.problem__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.problem__title-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.problem__description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 32px;
+}
+
+.problem__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.problem__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #000;
+}
+
+.problem__item-check {
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 150, 150, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #009999;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.problem__visual {
+  background: linear-gradient(135deg, #00B5B5 0%, #008080 50%, #006666 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+}
+
+.problem__equipment {
+  width: 100%;
+  max-width: 500px;
+}
+
+.problem__equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.problem__equipment-item {
+  aspect-ratio: 1;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem__equipment-item--monitor {
+  grid-column: span 2;
+  aspect-ratio: 2/1;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 8px;
+}
+
+.problem__equipment-item--monitor::before {
+  content: '';
+  width: 80%;
+  height: 70%;
+  background: #333;
+  border-radius: 4px;
+}
+
+.problem__equipment-item--scanner {
+  background: linear-gradient(145deg, #444, #222);
+}
+
+.problem__equipment-item--printer {
+  background: linear-gradient(145deg, #3a3a3a, #1a1a1a);
+}
+
+.problem__equipment-item--fiscal {
+  background: linear-gradient(145deg, #333, #111);
+}
+
+.problem__price-tag {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  border-radius: 4px;
+  transform: rotate(10deg);
+  z-index: 2;
+}
+
+.problem__price-tag--red {
+  background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
+}
+
+@media (max-width: 1024px) {
+  .problem__container {
+    grid-template-columns: 1fr;
+  }
+
+  .problem__content {
+    padding: 60px 40px;
+  }
+
+  .problem__visual {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .problem__content {
+    padding: 40px 20px;
+  }
+
+  .problem__title {
+    font-size: 24px;
+  }
+
+  .problem__description {
+    font-size: 14px;
+  }
+
+  .problem__item {
+    font-size: 14px;
+  }
+}

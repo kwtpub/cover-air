@@ -1,0 +1,306 @@
+.solution {
+  position: relative;
+  overflow: hidden;
+}
+
+.solution__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 700px;
+}
+
+.solution__visual {
+  background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 30%, #FF8C00 70%, #FFA500 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  position: relative;
+}
+
+.solution__phone {
+  position: relative;
+  width: 240px;
+  height: 500px;
+  background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
+  border-radius: 36px;
+  padding: 8px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.solution__phone-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 24px;
+  background: #000;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.solution__phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 28px;
+  padding: 40px 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution__app-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.solution__app-logo {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--primary-pink);
+}
+
+.solution__app-title {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.solution__payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.solution__payment-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.solution__payment-item--active {
+  background: rgba(233, 30, 140, 0.1);
+}
+
+.solution__payment-radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.solution__payment-item--active .solution__payment-radio {
+  border-color: var(--primary-pink);
+  background: var(--primary-pink);
+}
+
+.solution__payment-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+}
+
+.solution__app-btn {
+  margin-top: auto;
+  padding: 14px;
+  background: var(--primary-pink);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* NFC Card */
+.solution__nfc-card {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.solution__nfc-inner {
+  width: 160px;
+  height: 240px;
+  background: linear-gradient(135deg, #7C9082 0%, #8fa596 100%);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 40px rgba(233, 30, 140, 0.3);
+}
+
+.solution__nfc-brand {
+  font-size: 14px;
+  font-weight: 800;
+  font-style: italic;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.solution__nfc-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.solution__nfc-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.solution__nfc-icon span {
+  color: var(--primary-pink);
+}
+
+.solution__nfc-qr {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 6px;
+  padding: 4px;
+  margin-bottom: 8px;
+}
+
+.solution__nfc-qr svg {
+  width: 100%;
+  height: 100%;
+}
+
+.solution__nfc-text {
+  font-size: 10px;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.solution__nfc-patent {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Content */
+.solution__content {
+  background: #ffffff;
+  padding: 60px;
+  color: #000;
+}
+
+.solution__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.solution__title-accent {
+  color: var(--primary-pink);
+}
+
+.solution__description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.solution__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.solution__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #000;
+  line-height: 1.5;
+}
+
+.solution__item-check {
+  width: 20px;
+  height: 20px;
+  background: rgba(233, 30, 140, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-pink);
+  font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.solution__item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.solution__item-highlight {
+  color: var(--primary-pink);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .solution__container {
+    grid-template-columns: 1fr;
+  }
+
+  .solution__visual {
+    padding: 40px;
+    min-height: 500px;
+  }
+
+  .solution__content {
+    padding: 40px;
+  }
+
+  .solution__nfc-card {
+    right: 10px;
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .solution__visual {
+    padding: 20px;
+  }
+
+  .solution__content {
+    padding: 30px 20px;
+  }
+
+  .solution__title {
+    font-size: 22px;
+  }
+
+  .solution__phone {
+    width: 200px;
+    height: 420px;
+  }
+
+  .solution__nfc-card {
+    display: none;
+  }
+}

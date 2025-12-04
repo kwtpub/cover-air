@@ -1,0 +1,156 @@
+.features {
+  background: var(--bg-dark);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.features__background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.features__background-text span {
+  font-size: 200px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(233, 30, 140, 0.15);
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.features__container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  z-index: 1;
+}
+
+.features__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.features__icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.features__title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.features__title-brand {
+  color: var(--primary-pink);
+  font-style: italic;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 80px;
+  margin-bottom: 60px;
+}
+
+.features__group {
+  max-width: 400px;
+}
+
+.features__group:nth-child(odd) {
+  justify-self: end;
+}
+
+.features__group:nth-child(even) {
+  justify-self: start;
+}
+
+.features__group-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 20px;
+}
+
+.features__group-title-accent {
+  color: var(--primary-pink);
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.features__item {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.features__patent {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .features__background-text span {
+    font-size: 120px;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .features__group,
+  .features__group:nth-child(odd),
+  .features__group:nth-child(even) {
+    max-width: 100%;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .features__list {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 0;
+  }
+
+  .features__container {
+    padding: 0 20px;
+  }
+
+  .features__title {
+    font-size: 28px;
+  }
+
+  .features__background-text span {
+    font-size: 60px;
+  }
+
+  .features__group-title {
+    font-size: 18px;
+  }
+
+  .features__item {
+    font-size: 14px;
+  }
+}

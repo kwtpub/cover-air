@@ -1,0 +1,162 @@
+.problem {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #FFF5F5 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.problem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #EF4444, #F87171, #EF4444);
+}
+
+.problem__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.problem__content {
+  max-width: 800px;
+  margin-bottom: 48px;
+}
+
+.problem__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.problem__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.problem__title-accent {
+  color: #EF4444;
+}
+
+.problem__description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-gray);
+}
+
+.problem__description strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.problem__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.problem__item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+  transition: all 0.2s ease;
+}
+
+.problem__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.problem__item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.problem__item span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.problem__total {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 40px;
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+}
+
+.problem__total-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.problem__total-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .problem {
+    padding: 60px 0;
+  }
+
+  .problem__title {
+    font-size: 28px;
+  }
+
+  .problem__description {
+    font-size: 16px;
+  }
+
+  .problem__list {
+    grid-template-columns: 1fr;
+  }
+
+  .problem__item {
+    padding: 16px 20px;
+  }
+
+  .problem__total {
+    width: 100%;
+    text-align: center;
+  }
+
+  .problem__total-value {
+    font-size: 28px;
+  }
+}
+
