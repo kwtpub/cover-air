@@ -13,37 +13,21 @@ const Hero = () => {
             <span className="hero__title-line">кассового аппарата</span>
           </h1>
 
-          <p className="hero__subtitle">Подключение и интеграция бесплатн<span className="hero__cursor">|</span></p>
 
           <div className="hero__buttons">
             <a href="#connect" className="hero__btn hero__btn--orange">
               Подключиться за 0 ₽
             </a>
-            <a href="#partners" className="hero__btn hero__btn--green">
-              Стать партнёром
-            </a>
-          </div>
-
-          <div className="hero__badges">
-            <div className="hero__badge">
-              <span className="hero__badge-sk">Sk</span>
-              <span className="hero__badge-atom">⚛</span>
-              <span className="hero__badge-text">Участник</span>
-            </div>
           </div>
         </div>
 
         <div className="hero__visual">
-          <div className="hero__video">
-            <video 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="hero__video-player"
-            >
-              <source src="/video/1080-final_1_min.mp4" type="video/mp4" />
-            </video>
+          <div className="hero__image">
+            <img 
+              src="/images/iphone-logo.svg" 
+              alt="Phone" 
+              className="hero__image-img"
+            />
           </div>
         </div>
       </div>

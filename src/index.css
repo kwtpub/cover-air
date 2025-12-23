@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+@font-face {
+  font-family: 'Philo Logic Expanded';
+  src: local('Philo Logic Expanded Regular'), local('Philo-Logic-Expanded-Regular'),
+    url('/fonts/PhiloLogicXP-ExpandedRegular.woff2') format('woff2'),
+    url('/fonts/PhiloLogicXP-ExpandedRegular.woff') format('woff'),
+    url('/fonts/PhiloLogicXP-ExpandedRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -13,6 +25,9 @@
   --bg-darker: #000000;
   --text-white: #ffffff;
   --text-gray: #888888;
+  --font-philo: 'Philo Logic Expanded', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --gradient-pink: linear-gradient(135deg, #7C9082 0%, #8fa596 100%);
   --gradient-cyan: linear-gradient(180deg, #00D4AA 0%, #0099CC 100%);
   --gradient-orange: linear-gradient(135deg, #F5A623 0%, #FF8C00 100%);
@@ -23,7 +38,9 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-white);

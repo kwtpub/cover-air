@@ -8,10 +8,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  height: 200px;
-  background: linear-gradient(180deg, #00B5B5 0%, transparent 100%);
-  opacity: 0.3;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at top left, rgba(10, 186, 181, 0.3) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .how-it-works__container {
@@ -30,6 +30,7 @@
 }
 
 .how-it-works__title-brand {
+  font-family: var(--font-philo);
   color: var(--primary-pink);
   font-style: italic;
 }

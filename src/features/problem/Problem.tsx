@@ -36,30 +36,12 @@ const Problem = () => {
         </div>
 
         <div className="problem__visual">
-          <div className="problem__equipment">
-            {/* Кассовое оборудование с ценниками */}
-            <div className="problem__equipment-grid">
-              <div className="problem__equipment-item problem__equipment-item--monitor">
-                <div className="problem__price-tag problem__price-tag--red">
-                  35 000 ₽
-                </div>
-              </div>
-              <div className="problem__equipment-item problem__equipment-item--scanner">
-                <div className="problem__price-tag problem__price-tag--red">
-                  12 000 ₽
-                </div>
-              </div>
-              <div className="problem__equipment-item problem__equipment-item--printer">
-                <div className="problem__price-tag problem__price-tag--red">
-                  12 000 ₽
-                </div>
-              </div>
-              <div className="problem__equipment-item problem__equipment-item--fiscal">
-                <div className="problem__price-tag problem__price-tag--red">
-                  2,5%
-                </div>
-              </div>
-            </div>
+          <div className="problem__image">
+            <img 
+              src="/images/photo.webp" 
+              alt="Problem illustration" 
+              className="problem__image-img"
+            />
           </div>
         </div>
       </div>

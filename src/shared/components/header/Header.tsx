@@ -7,16 +7,14 @@ const Header = () => {
   const navItems = [
     { label: 'Зарабатывайте с нами', href: '#earn' },
     { label: 'Инвесторам', href: '#investor' },
-    { label: 'Подключиться к сервису', href: '#connect', isButton: true },
+    { label: 'Международные платежи', href: '#international' },
   ];
 
   return (
     <header className="header">
       <div className="header__container">
         <a href="/" className="header__logo">
-          <span className="header__logo-text">
-            <span className="header__logo-u">U</span>DMPAY
-          </span>
+          <span className="header__logo-text">Cover Air</span>
         </a>
 
         <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
@@ -25,7 +23,7 @@ const Header = () => {
               <li key={index} className="header__nav-item">
                 <a
                   href={item.href}
-                  className={`header__nav-link ${item.isButton ? 'header__nav-link--button' : ''}`}
+                  className="header__nav-link"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

@@ -3,19 +3,21 @@ import { Header } from './shared/components/header';
 import { Hero } from './features/hero';
 import { Problem } from './features/problem';
 import { Solution } from './features/solution';
-import { Exclusive } from './features/exclusive';
 import { HowItWorks } from './features/how-it-works';
 import { Features } from './features/features-section';
 import { Comparison } from './features/comparison';
 import { FAQ } from './features/faq';
 import { EarnWithUs } from './features/earn-with-us';
 import { InvestorPage } from './features/investor';
+import { InternationalPayments } from './features/international-payments';
+import { ComparisonTable } from './features/comparison-table';
+import { CoverAirProcess } from './features/cover-air-process';
 import { ConnectForm } from './features/connect-form';
 import { Footer } from './shared/components/footer';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'earn' | 'investor'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'earn' | 'investor' | 'international'>('home');
 
   useEffect(() => {
     const checkHash = () => {
@@ -25,11 +27,13 @@ function App() {
         setCurrentPage('earn');
       } else if (hash === '#investor') {
         setCurrentPage('investor');
+      } else if (hash === '#international') {
+        setCurrentPage('international');
       } else {
         setCurrentPage('home');
       }
       
-      if (hash === '#earn' || hash === '#investor') {
+      if (hash === '#earn' || hash === '#investor' || hash === '#international') {
         // Отменяем стандартное поведение скролла к якорю
         setTimeout(() => {
           window.scrollTo({ top: 0, behavior: 'instant' });
@@ -67,6 +71,18 @@ function App() {
     );
   }
 
+  if (currentPage === 'international') {
+    return (
+      <div className="app">
+        <Header />
+        <main>
+          <InternationalPayments />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="app">
       <Header />
@@ -74,8 +90,9 @@ function App() {
         <Hero />
         <Problem />
         <Solution />
-        <Exclusive />
         <HowItWorks />
+        <ComparisonTable />
+        <CoverAirProcess />
         <Features />
         <Comparison />
         <FAQ />
