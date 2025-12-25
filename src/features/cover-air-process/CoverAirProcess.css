@@ -45,7 +45,7 @@
 
 .cover-air-process__brand {
   font-family: var(--font-philo);
-  color: var(--primary);
+  color: var(--black-primary);
   font-size: clamp(20px, 3.5vw, 32px);
   font-weight: 600;
 }
