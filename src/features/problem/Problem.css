@@ -147,7 +147,7 @@
 }
 
 .problem__price-tag--red {
-  background: linear-gradient(135deg, #E53935 0%, #C62828 100%);
+  background: linear-gradient(135deg, #888888 0%, #666666 100%);
 }
 
 @media (max-width: 1024px) {

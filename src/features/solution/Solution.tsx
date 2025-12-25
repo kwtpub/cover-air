@@ -19,7 +19,7 @@ const Solution = () => {
         <div className="solution__visual">
           <div className="solution__image">
             <img 
-              src="/images/iphone-logo.svg" 
+              src="/images/process-pay.svg" 
               alt="iPhone" 
               className="solution__image-img"
             />

@@ -109,7 +109,14 @@
   color: #0ABAB5;
   text-align: center;
   line-height: 1.3;
-  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.cover-air-process__visual-circles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .cover-air-process__step-circle {
@@ -189,25 +196,62 @@
 @media (max-width: 1024px) {
   .cover-air-process__container {
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .cover-air-process__content {
     max-width: 100%;
+    order: 1;
   }
 
   .cover-air-process__visual {
-    min-width: 300px;
+    min-width: 100%;
+    width: 100%;
     height: auto;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cover-air-process__steps-label {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cover-air-process__visual-circles {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
   }
 
   .cover-air-process__step-circle {
-    width: 180px;
-    height: 180px;
-    min-width: 180px;
-    min-height: 180px;
-    max-width: 180px;
-    max-height: 180px;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    margin-top: 0;
+  }
+  
+  .cover-air-process__step-icon {
+    font-size: 30px;
+  }
+  
+  .cover-air-process__step-icon svg,
+  .cover-air-process__step-icon img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cover-air-process__step-text {
+    font-size: 11px;
   }
 }
 
@@ -216,9 +260,19 @@
     padding: 60px 16px;
   }
 
+  .cover-air-process__container {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .cover-air-process__content {
+    text-align: left;
+  }
+
   .cover-air-process__payment-systems {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
+    justify-content: flex-start;
   }
 
   .cover-air-process__payment-icon {
@@ -226,29 +280,46 @@
     max-height: 45px;
   }
 
+  .cover-air-process__visual {
+    justify-content: center;
+  }
+
+  .cover-air-process__visual-circles {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+  }
+
   .cover-air-process__step-circle {
-    width: 160px;
-    height: 160px;
-    min-width: 160px;
-    min-height: 160px;
-    max-width: 160px;
-    max-height: 160px;
+    width: 95px;
+    height: 95px;
+    min-width: 95px;
+    min-height: 95px;
+    max-width: 95px;
+    max-height: 95px;
+    margin-top: 0;
   }
 
   .cover-air-process__step-icon {
-    font-size: 36px;
+    font-size: 26px;
   }
   
   .cover-air-process__step-icon svg,
   .cover-air-process__step-icon img {
-    width: 65px;
-    height: 65px;
+    width: 35px;
+    height: 35px;
   }
 
   .cover-air-process__step-text {
-    font-size: 12px;
+    font-size: 9px;
   }
-
+  
+  .cover-air-process__steps-label {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
 }
 
 @media (max-width: 480px) {

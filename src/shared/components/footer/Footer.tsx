@@ -7,9 +7,7 @@ const Footer = () => {
         <div className="footer__main">
           <div className="footer__brand">
             <div className="footer__logo">
-              <svg viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="24" fill="white" fontSize="24" fontWeight="700" fontFamily="Inter">UDMPAY</text>
-              </svg>
+              <span className="footer__logo-text">Cover Air</span>
             </div>
             <p className="footer__tagline">
               Сервис для приема платежей по QR-кодам и NFC

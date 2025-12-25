@@ -92,6 +92,11 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.faq__brand {
+  font-family: var(--font-philo);
+  font-weight: 400;
+}
+
 @media (max-width: 768px) {
   .faq {
     padding: 60px 0;

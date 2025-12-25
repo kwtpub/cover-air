@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="hero__visual">
           <div className="hero__image">
             <img 
-              src="/images/iphone-logo.svg" 
+              src="/images/process-pay.svg" 
               alt="Phone" 
               className="hero__image-img"
             />

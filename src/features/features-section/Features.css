@@ -47,14 +47,15 @@
 }
 
 .features__title {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
-  color: var(--text-white);
+  font-family: var(--font-philo);
+  color: var(--primary-pink);
   text-align: center;
 }
 
 .features__title-brand {
-  color: var(--primary-pink);
+  color: var(--text-pink);
   font-style: italic;
 }
 
@@ -67,13 +68,6 @@
 
 .features__group {
   max-width: 400px;
-}
-
-.features__group:nth-child(odd) {
-  justify-self: end;
-}
-
-.features__group:nth-child(even) {
   justify-self: start;
 }
 
@@ -116,16 +110,14 @@
     gap: 40px;
   }
 
-  .features__group,
-  .features__group:nth-child(odd),
-  .features__group:nth-child(even) {
+  .features__group {
     max-width: 100%;
-    justify-self: center;
-    text-align: center;
+    justify-self: start;
+    text-align: left;
   }
 
   .features__list {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 

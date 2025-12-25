@@ -50,35 +50,37 @@ const CoverAirProcess = () => {
         </div>
 
         <div className="cover-air-process__visual">
-          <div className="cover-air-process__steps-label">
-            Оплата<br/>в 3 клика
+          <div className="cover-air-process__visual-circles">
+            <div className="cover-air-process__step-circle cover-air-process__step-circle--1">
+              <div className="cover-air-process__step-icon">
+                <img src="/images/qr-code.png" alt="QR-код" />
+              </div>
+              <div className="cover-air-process__step-text">
+                QR-код<br/>или NFC
+              </div>
+            </div>
+
+            <div className="cover-air-process__step-circle cover-air-process__step-circle--2">
+              <div className="cover-air-process__step-icon">
+                <img src="/images/bank-building.png" alt="Банк" />
+              </div>
+              <div className="cover-air-process__step-text">
+                Выбор<br/>банка
+              </div>
+            </div>
+
+            <div className="cover-air-process__step-circle cover-air-process__step-circle--3">
+              <div className="cover-air-process__step-icon">
+                <img src="/images/credit-card.png" alt="Оплата" />
+              </div>
+              <div className="cover-air-process__step-text">
+                Оплата
+              </div>
+            </div>
           </div>
           
-          <div className="cover-air-process__step-circle cover-air-process__step-circle--1">
-            <div className="cover-air-process__step-icon">
-              <img src="/images/qr-code.png" alt="QR-код" />
-            </div>
-            <div className="cover-air-process__step-text">
-              QR-код<br/>или NFC
-            </div>
-          </div>
-
-          <div className="cover-air-process__step-circle cover-air-process__step-circle--2">
-            <div className="cover-air-process__step-icon">
-              <img src="/images/bank-building.png" alt="Банк" />
-            </div>
-            <div className="cover-air-process__step-text">
-              Выбор<br/>банка
-            </div>
-          </div>
-
-          <div className="cover-air-process__step-circle cover-air-process__step-circle--3">
-            <div className="cover-air-process__step-icon">
-              <img src="/images/credit-card.png" alt="Оплата" />
-            </div>
-            <div className="cover-air-process__step-text">
-              Оплата
-            </div>
+          <div className="cover-air-process__steps-label">
+            Оплата<br/>в 3 клика
           </div>
         </div>
       </div>

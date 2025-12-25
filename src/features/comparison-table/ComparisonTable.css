@@ -9,7 +9,7 @@
 }
 
 .comparison-table__title {
-  font-family: 'PhiloLogicXP', sans-serif;
+  font-family: var(--font-philo);
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 400;
   text-align: center;

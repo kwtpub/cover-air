@@ -1,0 +1,471 @@
+.franchise-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.franchise-hero {
+  position: relative;
+  min-height: 30vh;
+  background: linear-gradient(135deg, #0ABAB5 0%, #E0E0E0 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 60px 0 40px;
+}
+
+
+.franchise-hero__content {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: auto;
+  background: transparent;
+  z-index: 2;
+}
+
+.franchise-hero__left {
+  flex: 0 0 50%;
+  padding: 40px 0;
+  z-index: 10;
+  position: relative;
+  background: transparent;
+}
+
+
+.franchise-hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.franchise-hero__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.franchise-hero__right {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.franchise-hero__chart {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.franchise-hero__chart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .franchise-hero__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .franchise-hero__left {
+    flex: 1;
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .franchise-hero__right {
+    flex: 1;
+  }
+
+  .franchise-hero__chart {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .franchise-hero {
+    min-height: 500px;
+    padding: 80px 0 40px;
+  }
+
+  .franchise-hero__left {
+    padding: 40px 24px;
+  }
+
+  .franchise-hero__title {
+    font-size: 32px;
+  }
+
+  .franchise-hero__subtitle {
+    font-size: 18px;
+  }
+
+  .franchise-hero__chart {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Franchise Offer Section */
+.franchise-offer {
+  background: #0D0D0D;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.franchise-offer::before,
+.franchise-offer::after {
+  content: '';
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.franchise-offer::before {
+  background: #0ABAB5;
+  top: -400px;
+  left: -400px;
+}
+
+.franchise-offer::after {
+  background: #0ABAB5;
+  bottom: -400px;
+  right: -400px;
+}
+
+.franchise-offer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.franchise-offer__title {
+  font-family: var(--font-philo);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.franchise-offer__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.franchise-offer__card {
+  border-radius: 12px;
+  border: 2px solid var(--card-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+  position: relative;
+}
+
+.franchise-offer__card-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-color);
+  padding: 8px 20px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.franchise-offer__card-badge h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.franchise-offer__card-content {
+  padding: 30px 20px 20px;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.franchise-offer__headline {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.franchise-offer__features {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.franchise-offer__features li {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.franchise-offer__features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--card-color);
+  font-size: 20px;
+}
+
+.franchise-offer__btn {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: var(--card-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.franchise-offer__btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+@media (max-width: 1024px) {
+  .franchise-offer__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .franchise-offer__card-content {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .franchise-offer {
+    padding: 60px 16px;
+  }
+
+  .franchise-offer__title {
+    margin-bottom: 40px;
+  }
+
+  .franchise-offer__grid {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .franchise-offer__card-badge h3 {
+    font-size: 16px;
+    padding: 6px 16px;
+  }
+
+  .franchise-offer__headline {
+    font-size: 16px;
+  }
+
+  .franchise-offer__features li {
+    font-size: 14px;
+  }
+}
+
+/* Questions Section */
+.franchise-questions {
+  padding: 100px 0;
+  background: #2a3a3a;
+  position: relative;
+  overflow: hidden;
+}
+
+.franchise-questions__container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.franchise-questions__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.franchise-questions__subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.franchise-questions__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.franchise-questions__field {
+  display: flex;
+  flex-direction: column;
+}
+
+.franchise-questions__field input {
+  padding: 14px 16px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #000000;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.franchise-questions__field input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.franchise-questions__field input:focus {
+  box-shadow: 0 0 0 2px rgba(10, 186, 181, 0.3);
+}
+
+.franchise-questions__phone-input {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.franchise-questions__phone-prefix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.03);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.franchise-questions__phone-flag {
+  font-size: 20px;
+}
+
+.franchise-questions__phone-input input {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #000000;
+  outline: none;
+}
+
+.franchise-questions__phone-input input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.franchise-questions__select-wrapper {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.franchise-questions__select-wrapper select {
+  width: 100%;
+  padding: 14px 40px 14px 16px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #000000;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.franchise-questions__select-wrapper select:focus {
+  box-shadow: 0 0 0 2px rgba(10, 186, 181, 0.3);
+}
+
+.franchise-questions__select-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.franchise-questions__submit {
+  padding: 18px 32px;
+  background: #0ABAB5;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.franchise-questions__submit:hover {
+  background: #089B96;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 186, 181, 0.4);
+}
+
+@media (max-width: 768px) {
+  .franchise-questions {
+    padding: 60px 0;
+  }
+
+  .franchise-questions__container {
+    padding: 0 24px;
+  }
+
+  .franchise-questions__title {
+    font-size: 32px;
+  }
+
+  .franchise-questions__subtitle {
+    font-size: 16px;
+  }
+
+  .franchise-questions__submit {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+}

@@ -62,7 +62,6 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--text-white);
-  margin-bottom: 8px;
 }
 
 .how-it-works__step-title {
@@ -71,6 +70,7 @@
   color: var(--text-white);
   margin-bottom: 24px;
   min-height: 48px;
+  display: block;
 }
 
 .how-it-works__step-visual {
@@ -210,18 +210,94 @@
 
 @media (max-width: 1024px) {
   .how-it-works__steps {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .how-it-works__arrow {
-    transform: rotate(90deg);
-    margin: 0;
+    gap: 8px;
+    padding: 0 10px;
   }
 
   .how-it-works__step {
-    max-width: 100%;
+    max-width: 220px;
+    flex: 1;
+  }
+
+  .how-it-works__step-visual {
+    min-height: 220px;
+  }
+
+  .how-it-works__phone {
+    width: 100px;
+    height: 200px;
+    border-radius: 18px;
+    padding: 4px;
+  }
+
+  .how-it-works__phone-screen {
+    border-radius: 14px;
+    padding: 15px 8px;
+  }
+
+  .how-it-works__nfc-tag {
+    padding: 6px 12px;
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .how-it-works__qr-code {
+    width: 70px;
+    height: 70px;
+    background-size: 14px 14px;
+    background-position: 0 0, 0 7px, 7px -7px, -7px 0px;
+  }
+
+  .how-it-works__nfc-card-small {
+    width: 50px;
+    height: 80px;
+    bottom: 30px;
+    right: 10px;
+  }
+
+  .how-it-works__arrow {
+    margin-top: 110px;
+    font-size: 20px;
+  }
+
+  .how-it-works__step-note {
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  .how-it-works__bank-title {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .how-it-works__amount {
+    font-size: 9px;
+  }
+
+  .how-it-works__amount-value {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .how-it-works__qr-small {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+
+  .how-it-works__pay-btn {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .how-it-works__receipt-title {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .how-it-works__receipt {
+    padding: 15px;
+    font-size: 10px;
   }
 }
 
@@ -231,14 +307,120 @@
   }
 
   .how-it-works__container {
-    padding: 0 20px;
+    padding: 0 12px;
   }
 
   .how-it-works__title {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .how-it-works__description {
+    font-size: 13px;
+    margin-bottom: 40px;
+  }
+
+  .how-it-works__steps {
+    gap: 4px;
+    padding: 0;
+  }
+
+  .how-it-works__step {
+    max-width: 160px;
+    flex: 1;
+  }
+
+  .how-it-works__step-visual {
+    min-height: 180px;
+  }
+
+  .how-it-works__phone {
+    width: 80px;
+    height: 160px;
+    border-radius: 14px;
+    padding: 3px;
+  }
+
+  .how-it-works__phone-screen {
+    border-radius: 11px;
+    padding: 12px 6px;
+  }
+
+  .how-it-works__nfc-tag {
+    padding: 4px 8px;
+    font-size: 8px;
+    margin-bottom: 8px;
+  }
+
+  .how-it-works__qr-code {
+    width: 50px;
+    height: 50px;
+    background-size: 10px 10px;
+    background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+  }
+
+  .how-it-works__nfc-card-small {
+    width: 35px;
+    height: 55px;
+    bottom: 20px;
+    right: 5px;
+    border-radius: 5px;
+  }
+
+  .how-it-works__arrow {
+    margin-top: 90px;
+    font-size: 16px;
+  }
+
+  .how-it-works__step-note {
+    font-size: 9px;
+    margin-top: 8px;
+  }
+
+  .how-it-works__step-title {
+    font-size: 13px;
+    min-height: auto;
+    margin-bottom: 16px;
+  }
+
+  .how-it-works__step-number {
     font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .how-it-works__bank-title {
+    font-size: 8px;
+    margin-bottom: 8px;
+  }
+
+  .how-it-works__amount {
+    font-size: 7px;
+  }
+
+  .how-it-works__amount-value {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .how-it-works__qr-small {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+
+  .how-it-works__pay-btn {
+    padding: 6px 12px;
+    font-size: 8px;
+    border-radius: 6px;
+  }
+
+  .how-it-works__receipt-title {
+    font-size: 9px;
+    margin-bottom: 8px;
+  }
+
+  .how-it-works__receipt {
+    padding: 10px;
+    font-size: 8px;
+    border-radius: 6px;
   }
 }

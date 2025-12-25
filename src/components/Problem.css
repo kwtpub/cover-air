@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #EF4444, #F87171, #EF4444);
+  background: linear-gradient(90deg, #888888, #A0A0A0, #888888);
 }
 
 .problem__container {
@@ -31,8 +31,8 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(239, 68, 68, 0.1);
-  color: #EF4444;
+  background: rgba(136, 136, 136, 0.1);
+  color: #888888;
   border-radius: 100px;
   font-size: 14px;
   font-weight: 600;
@@ -48,7 +48,7 @@
 }
 
 .problem__title-accent {
-  color: #EF4444;
+  color: #888888;
 }
 
 .problem__description {
@@ -76,15 +76,15 @@
   padding: 20px 24px;
   background: #ffffff;
   border-radius: 12px;
-  border: 1px solid rgba(239, 68, 68, 0.2);
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(136, 136, 136, 0.2);
+  box-shadow: 0 2px 8px rgba(136, 136, 136, 0.08);
   transition: all 0.2s ease;
 }
 
 .problem__item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(239, 68, 68, 0.15);
-  border-color: rgba(239, 68, 68, 0.4);
+  box-shadow: 0 4px 16px rgba(136, 136, 136, 0.15);
+  border-color: rgba(136, 136, 136, 0.4);
 }
 
 .problem__item-icon {
@@ -93,8 +93,8 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  background: rgba(239, 68, 68, 0.1);
-  color: #EF4444;
+  background: rgba(136, 136, 136, 0.1);
+  color: #888888;
   border-radius: 8px;
   flex-shrink: 0;
 }
@@ -110,9 +110,9 @@
   flex-direction: column;
   gap: 8px;
   padding: 24px 40px;
-  background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+  background: linear-gradient(135deg, #888888 0%, #666666 100%);
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 8px 24px rgba(136, 136, 136, 0.3);
 }
 
 .problem__total-label {

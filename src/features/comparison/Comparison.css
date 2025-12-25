@@ -136,8 +136,8 @@
 }
 
 .comparison__value--bad {
-  background: rgba(239, 68, 68, 0.1);
-  color: #F87171;
+  background: rgba(136, 136, 136, 0.1);
+  color: #888888;
 }
 
 .comparison__total {
@@ -156,8 +156,8 @@
 }
 
 .comparison__total--bad {
-  background: rgba(239, 68, 68, 0.2);
-  color: #F87171;
+  background: rgba(136, 136, 136, 0.2);
+  color: #888888;
 }
 
 .comparison__cta {

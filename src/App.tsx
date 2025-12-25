@@ -5,10 +5,14 @@ import { Problem } from './features/problem';
 import { Solution } from './features/solution';
 import { HowItWorks } from './features/how-it-works';
 import { Features } from './features/features-section';
-import { Comparison } from './features/comparison';
+import { UseCases } from './features/use-cases';
+import { Partners } from './features/partners';
+import { IndustrySolutions } from './features/industry-solutions';
 import { FAQ } from './features/faq';
 import { EarnWithUs } from './features/earn-with-us';
 import { InvestorPage } from './features/investor';
+import { AgentPage } from './features/agent';
+import { FranchisePage } from './features/franchise';
 import { InternationalPayments } from './features/international-payments';
 import { ComparisonTable } from './features/comparison-table';
 import { CoverAirProcess } from './features/cover-air-process';
@@ -17,7 +21,7 @@ import { Footer } from './shared/components/footer';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'earn' | 'investor' | 'international'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'earn' | 'investor' | 'agent' | 'franchise' | 'international'>('home');
 
   useEffect(() => {
     const checkHash = () => {
@@ -27,17 +31,30 @@ function App() {
         setCurrentPage('earn');
       } else if (hash === '#investor') {
         setCurrentPage('investor');
+      } else if (hash === '#agent') {
+        setCurrentPage('agent');
+      } else if (hash === '#franchise') {
+        setCurrentPage('franchise');
       } else if (hash === '#international') {
         setCurrentPage('international');
       } else {
         setCurrentPage('home');
       }
       
-      if (hash === '#earn' || hash === '#investor' || hash === '#international') {
+      if (hash === '#earn' || hash === '#investor' || hash === '#agent' || hash === '#franchise' || hash === '#international') {
         // Отменяем стандартное поведение скролла к якорю
         setTimeout(() => {
           window.scrollTo({ top: 0, behavior: 'instant' });
         }, 0);
+      } else if (hash === '#connect') {
+        // Для #connect просто скроллим к якорю на главной странице
+        setCurrentPage('home');
+        setTimeout(() => {
+          const element = document.getElementById('connect');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
       }
     };
 
@@ -71,6 +88,30 @@ function App() {
     );
   }
 
+  if (currentPage === 'agent') {
+    return (
+      <div className="app">
+        <Header />
+        <main>
+          <AgentPage />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (currentPage === 'franchise') {
+    return (
+      <div className="app">
+        <Header />
+        <main>
+          <FranchisePage />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   if (currentPage === 'international') {
     return (
       <div className="app">
@@ -94,9 +135,11 @@ function App() {
         <ComparisonTable />
         <CoverAirProcess />
         <Features />
-        <Comparison />
-        <FAQ />
+        <UseCases />
+        <Partners />
+        <IndustrySolutions />
         <ConnectForm />
+        <FAQ />
       </main>
       <Footer />
     </div>

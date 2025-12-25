@@ -31,7 +31,7 @@ const Partners = () => {
         'Получайте вознаграждение каждый месяц',
       ],
       link: '#agents',
-      color: '#F59E0B',
+      color: '#0ABAB5',
     },
   ];
 

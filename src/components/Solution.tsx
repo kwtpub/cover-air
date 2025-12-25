@@ -14,7 +14,7 @@ const Solution = () => {
   ];
 
   const paymentSystems = [
-    { name: 'СБП', color: '#FFC107' },
+    { name: 'СБП', color: '#0ABAB5' },
     { name: 'Мир', color: '#00A86B' },
     { name: 'WeChat Pay', color: '#07C160' },
     { name: 'AliPay', color: '#1677FF' },

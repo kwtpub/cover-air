@@ -49,7 +49,13 @@ const ConnectForm = () => {
             <div className="connect-form__field">
               <label>Телефон</label>
               <div className="connect-form__phone-input">
-                <span className="connect-form__phone-prefix">+7</span>
+                <div className="connect-form__phone-prefix">
+                  <span className="connect-form__phone-flag">🇷🇺</span>
+                  <span>+7</span>
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" style={{ marginLeft: '4px' }}>
+                    <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                  </svg>
+                </div>
                 <input
                   type="tel"
                   placeholder="(000) 000-00-00"
@@ -76,17 +82,14 @@ const ConnectForm = () => {
               <label>Промокод (если есть)</label>
               <input
                 type="text"
-                placeholder="Введите промокод"
+                placeholder="Промокод (если есть)"
                 value={promo}
                 onChange={(e) => setPromo(e.target.value)}
               />
             </div>
 
             <button type="submit" className="connect-form__submit">
-              Отправить заявку
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M4.167 10h11.666M10 4.167L15.833 10 10 15.833" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              Отправить
             </button>
           </form>
 

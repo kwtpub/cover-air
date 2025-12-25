@@ -2,23 +2,18 @@ import { useEffect, useState } from 'react';
 import './InternationalPayments.css';
 
 const InternationalPayments = () => {
-  const [phone, setPhone] = useState('+7');
+  const [country, setCountry] = useState('');
+  const [amount, setAmount] = useState('');
+  const [phone, setPhone] = useState('');
+  const [messenger, setMessenger] = useState('WhatsApp');
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value;
-    if (!value.startsWith('+7')) {
-      value = '+7' + value.replace(/^\+7/, '');
-    }
-    setPhone(value);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', phone);
+    console.log({ country, amount, phone, messenger });
   };
 
   return (
@@ -48,10 +43,11 @@ const InternationalPayments = () => {
         <div className="container">
           <div className="intl-about__content">
             <div className="intl-about__text">
-              <h2 className="intl-about__title">Как работает</h2>
+              <h2 className="intl-about__title">
+                Как работает <span className="intl-about__title-brand">COVER AIR</span>
+              </h2>
               <p>
-                <span className="intl-about__brand">UDMPAY (UP)</span> ― международный платёжный сервис. 
-                Мы помогаем юридическим и физическим лицам получать и отправлять платежи в любых странах 
+                <span className="intl-about__highlight">COVER AIR</span> ― платежное решение на базе международного платёжного сервиса <span className="intl-about__highlight">UDMPAY (UP)</span>. Мы помогаем юридическим и физическим лицам получать и отправлять платежи в любых странах 
                 с учётом всех законодательных требований.
               </p>
               <p>
@@ -77,19 +73,19 @@ const InternationalPayments = () => {
             Какие виды платежей<br />мы поддерживаем
           </h2>
           <div className="intl-types__grid">
-            <div className="intl-types__card">
+            <div className="intl-types__card intl-types__card--gray">
               <div className="intl-types__number">1</div>
               <p className="intl-types__text">
                 Платежи за импорт и экспорт для юридических лиц
               </p>
             </div>
-            <div className="intl-types__card">
+            <div className="intl-types__card intl-types__card--black">
               <div className="intl-types__number">2</div>
               <p className="intl-types__text">
                 Международный эквайринг для оплаты товаров и услуг онлайн и на торговых точках
               </p>
             </div>
-            <div className="intl-types__card">
+            <div className="intl-types__card intl-types__card--cyan">
               <div className="intl-types__number">3</div>
               <p className="intl-types__text">
                 Переводы между физическими лицами
@@ -108,13 +104,50 @@ const InternationalPayments = () => {
               Оставьте заявку и наш консультант с вами свяжется.
             </p>
             <form className="intl-request__form" onSubmit={handleSubmit}>
-              <input
-                type="tel"
-                className="intl-request__input"
-                value={phone}
-                onChange={handlePhoneChange}
-                placeholder="+7"
-              />
+              <div className="intl-request__field">
+                <input
+                  type="text"
+                  placeholder="Страна и валюта"
+                  value={country}
+                  onChange={(e) => setCountry(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="intl-request__field">
+                <input
+                  type="text"
+                  placeholder="Сумма платежа"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="intl-request__field">
+                <input
+                  type="tel"
+                  placeholder="+7 (000) 000-00-00"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="intl-request__field">
+                <div className="intl-request__select-wrapper">
+                  <select
+                    value={messenger}
+                    onChange={(e) => setMessenger(e.target.value)}
+                    required
+                  >
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Telegram">Telegram</option>
+                    <option value="Viber">Viber</option>
+                    <option value="Звонок">Звонок</option>
+                  </select>
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="intl-request__select-arrow">
+                    <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                  </svg>
+                </div>
+              </div>
               <button type="submit" className="intl-request__btn">
                 Отправить
               </button>

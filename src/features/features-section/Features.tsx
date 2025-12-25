@@ -50,13 +50,8 @@ const Features = () => {
       
       <div className="features__container">
         <div className="features__header">
-          <div className="features__icon">
-            <svg viewBox="0 0 24 24" fill="none" width="32" height="32">
-              <path d="M12 2v20M2 12h20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-          </div>
           <h2 className="features__title">
-            Преимущества <span className="features__title-brand">UDMPAY</span>
+            Преимущества <span className="features__title-brand">COVER AIR</span>
           </h2>
         </div>
 

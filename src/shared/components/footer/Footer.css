@@ -23,9 +23,18 @@
   max-width: 320px;
 }
 
-.footer__logo svg {
-  height: 32px;
+.footer__logo {
   margin-bottom: 16px;
+}
+
+.footer__logo-text {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: var(--font-philo);
+  font-style: italic;
+  color: #0ABAB5;
+  letter-spacing: 2px;
+  display: block;
 }
 
 .footer__tagline {
@@ -53,7 +62,7 @@
 }
 
 .footer__badge svg {
-  color: var(--primary-pink);
+  color: #0ABAB5;
 }
 
 h4 {
@@ -81,11 +90,11 @@ h4 {
 }
 
 .footer__contact:hover {
-  color: var(--primary-pink);
+  color: #0ABAB5;
 }
 
 .footer__contact svg {
-  color: var(--primary-pink);
+  color: #0ABAB5;
   flex-shrink: 0;
 }
 
@@ -99,7 +108,7 @@ h4 {
 }
 
 .footer__address svg {
-  color: var(--primary-pink);
+  color: #0ABAB5;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -117,7 +126,7 @@ h4 {
 }
 
 .footer__nav a:hover {
-  color: var(--primary-pink);
+  color: #0ABAB5;
   transform: translateX(4px);
 }
 
@@ -139,7 +148,7 @@ h4 {
 }
 
 .footer__social-link:hover {
-  background: var(--primary-pink);
+  background: #0ABAB5;
   color: #ffffff;
   transform: translateY(-2px);
 }
