@@ -1,6 +1,6 @@
 .connect-form {
   padding: 100px 0;
-  background: #2a3a3a;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--bg-light-dark) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -17,13 +17,13 @@
 }
 
 .connect-form__content {
-  color: #fff;
+  color: var(--black-primary);
 }
 
 .connect-form__title,
 .connect-form__subtitle,
 .connect-form__step span {
-  color: #fff;
+  color: var(--black-primary);
 }
 
 .connect-form__title {
@@ -34,7 +34,7 @@
 
 .connect-form__subtitle {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--black-primary);
   margin-bottom: 32px;
 }
 
@@ -49,15 +49,15 @@
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 }
 
 .connect-form__step:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--primary-pink);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--primary);
   transform: translateX(8px);
 }
 
@@ -76,7 +76,7 @@
 
 .connect-form__step span {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--black-primary);
 }
 
 .connect-form__card {

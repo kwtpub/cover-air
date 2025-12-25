@@ -40,7 +40,7 @@
 .franchise-hero__title {
   font-size: 48px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--black-primary);
   margin-bottom: 24px;
   line-height: 1.2;
   text-align: left;
@@ -49,7 +49,7 @@
 .franchise-hero__subtitle {
   font-size: 20px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--black-primary);
   line-height: 1.5;
   text-align: left;
 }
@@ -122,7 +122,7 @@
 
 /* Franchise Offer Section */
 .franchise-offer {
-  background: #0D0D0D;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--bg-light-dark) 100%);
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
@@ -164,7 +164,7 @@
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 400;
   text-align: center;
-  color: #ffffff;
+  color: var(--black-primary);
   margin-bottom: 60px;
 }
 

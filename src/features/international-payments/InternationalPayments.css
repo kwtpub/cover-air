@@ -288,7 +288,7 @@
 /* Request Form Section */
 .intl-request {
   padding: 100px 0;
-  background: #2a3a3a;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--bg-light-dark) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -303,14 +303,14 @@
 .intl-request__title {
   font-size: 48px;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--black-primary);
   text-align: center;
   margin-bottom: 16px;
 }
 
 .intl-request__subtitle {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--black-primary);
   text-align: center;
   margin-bottom: 40px;
 }
