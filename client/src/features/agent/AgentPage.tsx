@@ -1,21 +1,53 @@
 import { useEffect, useState } from 'react';
 import './AgentPage.css';
+import { submitForm } from '../../shared/services/api';
 
 const AgentPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [messenger, setMessenger] = useState('WhatsApp');
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ name, phone, messenger });
-    // Handle form submission
-    setIsModalOpen(false);
+    setIsLoading(true);
+    setMessage(null);
+
+    try {
+      const result = await submitForm({
+        phone,
+        contactMethod: messenger,
+      });
+
+      if (result.success) {
+        setMessage({ type: 'success', text: result.message || 'Заявка успешно отправлена!' });
+        setName('');
+        setPhone('');
+        setMessenger('WhatsApp');
+        setTimeout(() => {
+          setIsModalOpen(false);
+          setMessage(null);
+        }, 2000);
+      } else {
+        setMessage({ 
+          type: 'error', 
+          text: result.message || 'Ошибка при отправке формы' 
+        });
+      }
+    } catch (error) {
+      setMessage({ 
+        type: 'error', 
+        text: 'Не удалось отправить форму. Попробуйте позже.' 
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleOpenModal = () => {
@@ -171,9 +203,18 @@ const AgentPage = () => {
                   </svg>
                 </div>
               </div>
-              <button type="submit" className="agent-modal__submit">
-                Отправить
+              <button 
+                type="submit" 
+                className="agent-modal__submit"
+                disabled={isLoading}
+              >
+                {isLoading ? 'Отправка...' : 'Отправить'}
               </button>
+              {message && (
+                <div className={`agent-modal__message agent-modal__message--${message.type}`}>
+                  {message.text}
+                </div>
+              )}
             </form>
           </div>
         </div>

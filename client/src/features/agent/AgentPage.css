@@ -633,6 +633,31 @@
   box-shadow: 0 8px 24px rgba(10, 186, 181, 0.4);
 }
 
+.agent-modal__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.agent-modal__message {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.agent-modal__message--success {
+  background-color: rgba(10, 186, 181, 0.1);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary);
+}
+
+.agent-modal__message--error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #d32f2f;
+  border: 1px solid #d32f2f;
+}
+
 @media (max-width: 768px) {
   .agent-modal__content {
     padding: 32px 24px;

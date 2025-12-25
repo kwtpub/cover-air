@@ -1,19 +1,48 @@
 import { useEffect, useState } from 'react';
 import './FranchisePage.css';
+import { submitForm } from '../../shared/services/api';
 
 const FranchisePage = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [messenger, setMessenger] = useState('WhatsApp');
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ name, phone, messenger });
-    // Handle form submission
+    setIsLoading(true);
+    setMessage(null);
+
+    try {
+      const result = await submitForm({
+        phone,
+        contactMethod: messenger,
+      });
+
+      if (result.success) {
+        setMessage({ type: 'success', text: result.message || 'Заявка успешно отправлена!' });
+        setName('');
+        setPhone('');
+        setMessenger('WhatsApp');
+      } else {
+        setMessage({ 
+          type: 'error', 
+          text: result.message || 'Ошибка при отправке формы' 
+        });
+      }
+    } catch (error) {
+      setMessage({ 
+        type: 'error', 
+        text: 'Не удалось отправить форму. Попробуйте позже.' 
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -131,9 +160,18 @@ const FranchisePage = () => {
                 </svg>
               </div>
             </div>
-            <button type="submit" className="franchise-questions__submit">
-              Отправить
+            <button 
+              type="submit" 
+              className="franchise-questions__submit"
+              disabled={isLoading}
+            >
+              {isLoading ? 'Отправка...' : 'Отправить'}
             </button>
+            {message && (
+              <div className={`franchise-questions__message franchise-questions__message--${message.type}`}>
+                {message.text}
+              </div>
+            )}
           </form>
         </div>
       </section>

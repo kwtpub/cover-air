@@ -1,15 +1,45 @@
 import { useState } from 'react';
 import './ConnectForm.css';
+import { submitForm } from '../../shared/services/api';
 
 const ConnectForm = () => {
   const [phone, setPhone] = useState('');
   const [messenger, setMessenger] = useState('WhatsApp');
   const [promo, setPromo] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log({ phone, messenger, promo });
+    setIsLoading(true);
+    setMessage(null);
+
+    try {
+      const result = await submitForm({
+        phone,
+        contactMethod: messenger,
+        promo: promo || undefined,
+      });
+
+      if (result.success) {
+        setMessage({ type: 'success', text: result.message || 'Заявка успешно отправлена!' });
+        setPhone('');
+        setMessenger('WhatsApp');
+        setPromo('');
+      } else {
+        setMessage({ 
+          type: 'error', 
+          text: result.message || 'Ошибка при отправке формы' 
+        });
+      }
+    } catch (error) {
+      setMessage({ 
+        type: 'error', 
+        text: 'Не удалось отправить форму. Попробуйте позже.' 
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const steps = [
@@ -88,9 +118,18 @@ const ConnectForm = () => {
               />
             </div>
 
-            <button type="submit" className="connect-form__submit">
-              Отправить
+            <button 
+              type="submit" 
+              className="connect-form__submit"
+              disabled={isLoading}
+            >
+              {isLoading ? 'Отправка...' : 'Отправить'}
             </button>
+            {message && (
+              <div className={`connect-form__message connect-form__message--${message.type}`}>
+                {message.text}
+              </div>
+            )}
           </form>
 
           <p className="connect-form__disclaimer">

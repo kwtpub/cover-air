@@ -8,7 +8,24 @@ dotenv.config();
 const app: Express = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Настройка CORS
+const corsOptions = {
+  origin: [
+    'https://coverair.ru',
+    'http://coverair.ru',
+    'https://www.coverair.ru',
+    'http://www.coverair.ru',
+    'http://localhost',
+    'http://localhost:5173',
+    'http://localhost:80',
+    'http://localhost:3000',
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
