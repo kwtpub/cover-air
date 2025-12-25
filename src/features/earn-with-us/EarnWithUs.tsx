@@ -18,9 +18,6 @@ const EarnWithUs = () => {
             Зарабатывайте<br />с нами
           </h1>
           <div className="earn-hero__buttons">
-            <a href="#investor" className="earn-hero__btn earn-hero__btn--pink">
-              Инвестировать и купить долю
-            </a>
             <a href="#franchise" className="earn-hero__btn earn-hero__btn--orange">
               Купить франшизу
             </a>

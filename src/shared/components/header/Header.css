@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, #0ABAB5 0%, #A0A0A0 100%);
+  background: var(--gradient-primary);
   padding: 10px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -27,7 +27,7 @@
   font-family: var(--font-philo);
   font-size: 20px;
   font-weight: 400;
-  color: #000000;
+  color: var(--black-primary);
   letter-spacing: 0.5px;
 }
 
@@ -45,7 +45,7 @@
 .header__nav-link {
   display: block;
   padding: 6px 10px;
-  color: #000000;
+  color: var(--black-primary);
   font-size: 13px;
   font-weight: 500;
   transition: color 0.2s ease;
@@ -80,7 +80,7 @@
   height: 32px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  color: #000000;
+  color: var(--black-primary);
   transition: all 0.2s ease;
 }
 
@@ -111,7 +111,7 @@
   display: block;
   width: 20px;
   height: 2px;
-  background: #000000;
+  background: var(--black-primary);
   border-radius: 2px;
   transition: all 0.3s ease;
   position: absolute;
@@ -184,7 +184,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(135deg, #0ABAB5 0%, #A0A0A0 100%);
+    background: var(--gradient-primary);
     padding: 100px 20px 20px;
     opacity: 0;
     visibility: hidden;

@@ -16,10 +16,6 @@ const Exclusive = () => {
           <p className="exclusive__description">
             Инвестирование в UDMPAY открывает для вас доступ к беспрецедентно выгодным условиям, позволяя вам значительно снизить операционные расходы и максимизировать вашу прибыль.
           </p>
-
-          <a href="#investors" className="exclusive__btn">
-            Стать инвестором
-          </a>
         </div>
 
         <div className="exclusive__visual">

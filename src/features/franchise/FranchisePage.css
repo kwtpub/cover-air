@@ -6,7 +6,7 @@
 .franchise-hero {
   position: relative;
   min-height: 30vh;
-  background: linear-gradient(135deg, #0ABAB5 0%, #E0E0E0 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #E0E0E0 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -141,13 +141,13 @@
 }
 
 .franchise-offer::before {
-  background: #0ABAB5;
+  background: var(--primary);
   top: -400px;
   left: -400px;
 }
 
 .franchise-offer::after {
-  background: #0ABAB5;
+  background: var(--primary);
   bottom: -400px;
   right: -400px;
 }
@@ -215,7 +215,7 @@
 .franchise-offer__headline {
   font-size: 18px;
   font-weight: 600;
-  color: #000000;
+  color: var(--black-primary);
   margin-bottom: 20px;
   line-height: 1.4;
 }
@@ -227,7 +227,7 @@
 
 .franchise-offer__features li {
   font-size: 16px;
-  color: #000000;
+  color: var(--black-primary);
   margin-bottom: 12px;
   padding-left: 20px;
   position: relative;
@@ -346,7 +346,7 @@
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  color: #000000;
+  color: var(--black-primary);
   outline: none;
   transition: all 0.2s ease;
 }
@@ -373,7 +373,7 @@
   padding: 14px 16px;
   background: rgba(0, 0, 0, 0.03);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  color: #000000;
+  color: var(--black-primary);
   font-weight: 500;
   font-size: 16px;
 }
@@ -388,7 +388,7 @@
   border: none;
   background: transparent;
   font-size: 16px;
-  color: #000000;
+  color: var(--black-primary);
   outline: none;
 }
 
@@ -409,7 +409,7 @@
   border: none;
   border-radius: 12px;
   font-size: 16px;
-  color: #000000;
+  color: var(--black-primary);
   outline: none;
   appearance: none;
   cursor: pointer;
@@ -430,7 +430,7 @@
 
 .franchise-questions__submit {
   padding: 18px 32px;
-  background: #0ABAB5;
+  background: var(--primary);
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;
@@ -442,7 +442,7 @@
 }
 
 .franchise-questions__submit:hover {
-  background: #089B96;
+  background: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(10, 186, 181, 0.4);
 }

@@ -15,7 +15,7 @@ html {
 
 /* Selection styling */
 ::selection {
-  background: rgba(0, 200, 83, 0.2);
+  background: rgba(10, 186, 181, 0.2);
   color: inherit;
 }
 

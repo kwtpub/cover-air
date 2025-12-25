@@ -1,5 +1,5 @@
 .footer {
-  background: #000000;
+  background: var(--black-primary);
   padding: 80px 0 32px;
   color: #ffffff;
 }
@@ -32,7 +32,7 @@
   font-weight: 400;
   font-family: var(--font-philo);
   font-style: italic;
-  color: #0ABAB5;
+  color: var(--primary);
   letter-spacing: 2px;
   display: block;
 }
@@ -62,7 +62,7 @@
 }
 
 .footer__badge svg {
-  color: #0ABAB5;
+  color: var(--primary);
 }
 
 h4 {
@@ -90,11 +90,11 @@ h4 {
 }
 
 .footer__contact:hover {
-  color: #0ABAB5;
+  color: var(--primary);
 }
 
 .footer__contact svg {
-  color: #0ABAB5;
+  color: var(--primary);
   flex-shrink: 0;
 }
 
@@ -108,7 +108,7 @@ h4 {
 }
 
 .footer__address svg {
-  color: #0ABAB5;
+  color: var(--primary);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -126,7 +126,7 @@ h4 {
 }
 
 .footer__nav a:hover {
-  color: #0ABAB5;
+  color: var(--primary);
   transform: translateX(4px);
 }
 
@@ -148,7 +148,7 @@ h4 {
 }
 
 .footer__social-link:hover {
-  background: #0ABAB5;
+  background: var(--primary);
   color: #ffffff;
   transform: translateY(-2px);
 }

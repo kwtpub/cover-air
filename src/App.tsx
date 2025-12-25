@@ -10,7 +10,6 @@ import { Partners } from './features/partners';
 import { IndustrySolutions } from './features/industry-solutions';
 import { FAQ } from './features/faq';
 import { EarnWithUs } from './features/earn-with-us';
-import { InvestorPage } from './features/investor';
 import { AgentPage } from './features/agent';
 import { FranchisePage } from './features/franchise';
 import { InternationalPayments } from './features/international-payments';
@@ -21,7 +20,7 @@ import { Footer } from './shared/components/footer';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'earn' | 'investor' | 'agent' | 'franchise' | 'international'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'earn' | 'agent' | 'franchise' | 'international'>('home');
 
   useEffect(() => {
     const checkHash = () => {
@@ -29,8 +28,6 @@ function App() {
       
       if (hash === '#earn') {
         setCurrentPage('earn');
-      } else if (hash === '#investor') {
-        setCurrentPage('investor');
       } else if (hash === '#agent') {
         setCurrentPage('agent');
       } else if (hash === '#franchise') {
@@ -41,7 +38,7 @@ function App() {
         setCurrentPage('home');
       }
       
-      if (hash === '#earn' || hash === '#investor' || hash === '#agent' || hash === '#franchise' || hash === '#international') {
+      if (hash === '#earn' || hash === '#agent' || hash === '#franchise' || hash === '#international') {
         // Отменяем стандартное поведение скролла к якорю
         setTimeout(() => {
           window.scrollTo({ top: 0, behavior: 'instant' });
@@ -70,18 +67,6 @@ function App() {
         <Header />
         <main>
           <EarnWithUs />
-        </main>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (currentPage === 'investor') {
-    return (
-      <div className="app">
-        <Header />
-        <main>
-          <InvestorPage />
         </main>
         <Footer />
       </div>

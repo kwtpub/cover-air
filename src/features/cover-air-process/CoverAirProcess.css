@@ -1,8 +1,9 @@
 .cover-air-process {
-  background: #272325;
+  background: var(--gradient-primary);
   padding: 80px 20px;
   position: relative;
   overflow: hidden;
+  font-family: var(--font-montserrat);
 }
 
 .cover-air-process::before {
@@ -34,29 +35,33 @@
 }
 
 .cover-air-process__title {
+  font-family: var(--font-montserrat);
   font-size: clamp(20px, 3.5vw, 32px);
-  font-weight: 400;
-  color: #fff;
+  font-weight: 600;
+  color: var(--black-primary);
   margin-bottom: 24px;
   line-height: 1.2;
 }
 
 .cover-air-process__brand {
   font-family: var(--font-philo);
-  color: #0ABAB5;
+  color: var(--primary);
   font-size: clamp(20px, 3.5vw, 32px);
+  font-weight: 600;
 }
 
 .cover-air-process__description {
+  font-family: var(--font-montserrat);
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--black-primary);
   line-height: 1.6;
   margin-bottom: 32px;
 }
 
 .cover-air-process__working-text {
+  font-family: var(--font-montserrat);
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--black-primary);
   margin-bottom: 20px;
   text-decoration: underline;
 }
@@ -85,11 +90,13 @@
   max-width: 80px;
   max-height: 50px;
   object-fit: contain;
+  filter: brightness(0);
 }
 
 .cover-air-process__patent {
+  font-family: var(--font-montserrat);
   font-size: 14px;
-  color: #0ABAB5;
+  color: var(--primary);
   font-style: italic;
 }
 
@@ -104,9 +111,10 @@
 }
 
 .cover-air-process__steps-label {
+  font-family: var(--font-montserrat);
   font-size: 18px;
   font-weight: 600;
-  color: #0ABAB5;
+  color: var(--primary);
   text-align: center;
   line-height: 1.3;
   margin-top: 32px;
@@ -143,17 +151,17 @@
 }
 
 .cover-air-process__step-circle--1 {
-  border-color: #000;
+  border-color: var(--black-primary);
   z-index: 3;
 }
 
 .cover-air-process__step-circle--2 {
-  border-color: #000;
+  border-color: var(--black-primary);
   z-index: 2;
 }
 
 .cover-air-process__step-circle--3 {
-  border-color: #000;
+  border-color: var(--black-primary);
   z-index: 1;
 }
 
@@ -172,23 +180,24 @@
 }
 
 .cover-air-process__step-text {
+  font-family: var(--font-montserrat);
   font-size: 13px;
   font-weight: 600;
-  color: #000;
+  color: var(--black-primary);
   text-align: center;
   line-height: 1.3;
 }
 
 .cover-air-process__step-circle--1 .cover-air-process__step-text {
-  color: #000;
+  color: var(--black-primary);
 }
 
 .cover-air-process__step-circle--2 .cover-air-process__step-text {
-  color: #000;
+  color: var(--black-primary);
 }
 
 .cover-air-process__step-circle--3 .cover-air-process__step-text {
-  color: #000;
+  color: var(--black-primary);
 }
 
 

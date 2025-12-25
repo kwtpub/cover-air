@@ -1,5 +1,5 @@
 .industry-solutions {
-  background: #0D0D0D;
+  background: var(--bg-light-gray);
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
@@ -18,13 +18,13 @@
 }
 
 .industry-solutions::before {
-  background: #0ABAB5;
+  background: var(--primary);
   top: -400px;
   left: -400px;
 }
 
 .industry-solutions::after {
-  background: #0ABAB5;
+  background: var(--primary);
   bottom: -400px;
   right: -400px;
 }
@@ -41,7 +41,7 @@
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 400;
   text-align: center;
-  color: #000000;
+  color: var(--black-primary);
   margin-bottom: 60px;
 }
 
@@ -155,7 +155,7 @@
   margin: 0 auto;
   border-radius: 50%;
   background: #1a1a1a;
-  border: 3px solid #0ABAB5;
+  border: 3px solid var(--primary);
   box-shadow: 0 0 40px rgba(10, 186, 181, 0.6);
   color: #fff;
   font-size: 20px;

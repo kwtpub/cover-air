@@ -9,11 +9,11 @@
 }
 
 .comparison-table__title {
-  font-family: var(--font-philo);
+  font-family: var(--font-montserrat);
   font-size: clamp(32px, 5vw, 48px);
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
-  color: #0ABAB5;
+  color: var(--black-primary);
   margin-bottom: 48px;
   letter-spacing: -0.02em;
 }
@@ -29,6 +29,7 @@
   width: 100%;
   border-collapse: collapse;
   min-width: 700px;
+  color: #000;
 }
 
 /* Header */
@@ -37,7 +38,7 @@
   text-align: left;
   font-weight: 600;
   font-size: 16px;
-  background: linear-gradient(135deg, #0ABAB5 0%, #08a5a0 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #08a5a0 100%);
   color: #fff;
   border: none;
 }
@@ -75,7 +76,7 @@
 }
 
 .comparison-table__td--name {
-  color: #0ABAB5;
+  color: var(--black-primary);
   font-weight: 500;
   line-height: 1.4;
 }
@@ -87,7 +88,7 @@
 
 /* Values */
 .comparison-table__value--good {
-  color: #0ABAB5;
+  color: var(--black-primary);
   font-weight: 500;
 }
 
@@ -103,7 +104,7 @@
 .comparison-table__row--section .comparison-table__td--name {
   font-weight: 600;
   font-size: 16px;
-  color: #0ABAB5;
+  color: var(--black-primary);
 }
 
 /* Total Row */

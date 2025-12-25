@@ -1,6 +1,6 @@
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0ABAB5 0%, #A0A0A0 100%);
+  background: var(--gradient-primary);
   padding: 120px 0 60px;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@
   font-size: 52px;
   font-weight: 700;
   line-height: 1.1;
-  color: #000000;
+  color: var(--black-primary);
   margin-bottom: 24px;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .hero__btn--orange {
-  background: #000000;
+  background: var(--black-primary);
   color: #ffffff;
 }
 
@@ -78,13 +78,13 @@
 }
 
 .hero__btn--green {
-  background: linear-gradient(135deg, #00C853 0%, #00A843 100%);
+  background: linear-gradient(135deg, #0ABAB5 0%, #089B96 100%);
   color: var(--text-white);
 }
 
 .hero__btn--green:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 200, 83, 0.4);
+  box-shadow: 0 8px 24px rgba(10, 186, 181, 0.4);
 }
 
 .hero__badges {
@@ -105,10 +105,10 @@
 .hero__badge-sk {
   font-size: 18px;
   font-weight: 700;
-  color: #000;
+  color: var(--black-primary);
   background: #fff;
   padding: 2px 6px;
-  border: 2px solid #000;
+  border: 2px solid var(--black-primary);
 }
 
 .hero__badge-atom {
@@ -118,7 +118,7 @@
 .hero__badge-text {
   font-size: 14px;
   font-weight: 600;
-  color: #000;
+  color: var(--black-primary);
 }
 
 /* Visual section */
@@ -176,7 +176,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 28px;
-  background: #000;
+  background: var(--black-primary);
   border-radius: 20px;
   z-index: 10;
 }
@@ -251,7 +251,7 @@
 }
 
 .hero__payment-icon--sbp span {
-  background: linear-gradient(90deg, #0ABAB5, #4CAF50, #2196F3);
+  background: linear-gradient(90deg, var(--primary), #0ABAB5, #2196F3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -302,7 +302,7 @@
 .hero__nfc-card-inner {
   width: 180px;
   height: 280px;
-  background: linear-gradient(135deg, #0ABAB5 0%, #00D4AA 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   border-radius: 16px;
   padding: 16px;
   display: flex;

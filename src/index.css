@@ -29,6 +29,7 @@
   --bg-light-primary: #FFFFFF;
   --bg-light-dark: #F5F5F5;
   --bg-light-light: #F8FAFC;
+  --bg-light-gray: #A0A0A0;
   
   /* Главные черные цвета */
   --black-primary: #000000;
@@ -36,16 +37,19 @@
   --black-light: #1A1A1A;
   
   /* Старые переменные (для совместимости) */
-  --primary-pink: #0ABAB5;
+  --primary-pink: var(--primary);
   --bg-dark: #0D0D0D;
-  --bg-darker: #000000;
+  --bg-darker: var(--black-primary);
   --text-white: #ffffff;
   --text-gray: #888888;
   --font-philo: 'Philo Logic Expanded', sans-serif;
   --font-inter: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --gradient-pink: linear-gradient(135deg, #0ABAB5 0%, #00D4AA 100%);
-  --gradient-cyan: linear-gradient(180deg, #00D4AA 0%, #0099CC 100%);
+  --gradient-pink: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  --gradient-cyan: linear-gradient(180deg, var(--primary-light) 0%, #0099CC 100%);
+
+  /* шаблон основного градиента ( не обязательно использовать процентное соотношение как в градиенте ниже, просто взять за пример цвета ) */ 
+  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--bg-light-gray) 100%);
 }
 
 html {

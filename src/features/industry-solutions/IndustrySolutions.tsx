@@ -26,7 +26,7 @@ const IndustrySolutions = () => {
         'Выездные сборы платежей',
         'Сбор показаний приборов учета',
       ],
-      color: '#000000', // черный
+      color: 'var(--black-primary)', // черный
     },
     {
       id: 'education',

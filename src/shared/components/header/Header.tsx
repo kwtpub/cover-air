@@ -6,7 +6,6 @@ const Header = () => {
 
   const navItems = [
     { label: 'Зарабатывайте с нами', href: '#earn' },
-    { label: 'Инвесторам', href: '#investor' },
     { label: 'Агентам', href: '#agent' },
     { label: 'Франчайзи', href: '#franchise' },
     { label: 'Международные платежи', href: '#international' },

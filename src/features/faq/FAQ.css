@@ -32,12 +32,12 @@
 }
 
 .faq__item:hover {
-  border-color: rgba(233, 30, 140, 0.3);
+  border-color: rgba(10, 186, 181, 0.3);
 }
 
 .faq__item--open {
   border-color: var(--primary-pink);
-  box-shadow: 0 4px 20px rgba(233, 30, 140, 0.15);
+  box-shadow: 0 4px 20px rgba(10, 186, 181, 0.15);
 }
 
 .faq__question {

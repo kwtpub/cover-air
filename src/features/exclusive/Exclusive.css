@@ -49,7 +49,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px 40px;
-  background: linear-gradient(135deg, #00C853 0%, #00A843 100%);
+  background: linear-gradient(135deg, #0ABAB5 0%, #089B96 100%);
   color: var(--text-white);
   font-size: 16px;
   font-weight: 600;
@@ -59,7 +59,7 @@
 
 .exclusive__btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 200, 83, 0.4);
+  box-shadow: 0 8px 24px rgba(10, 186, 181, 0.4);
 }
 
 .exclusive__visual {

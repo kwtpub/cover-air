@@ -76,7 +76,7 @@ const AgentPage = () => {
       <section className="agent-earn">
         <div className="agent-earn__container">
           <h2 className="agent-earn__title">
-            Как зарабатывают <span className="agent-earn__title-brand">наши агенты</span>
+            Как зарабатывают наши агенты
           </h2>
           
           <div className="agent-earn__steps">

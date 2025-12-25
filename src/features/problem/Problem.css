@@ -12,14 +12,14 @@
 .problem__content {
   background: #ffffff;
   padding: 80px 60px;
-  color: #000;
+  color: var(--black-primary);
 }
 
 .problem__title {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
-  color: #000;
+  color: var(--black-primary);
   margin-bottom: 24px;
 }
 
@@ -46,7 +46,7 @@
   align-items: center;
   gap: 12px;
   font-size: 16px;
-  color: #000;
+  color: var(--black-primary);
 }
 
 .problem__item-check {

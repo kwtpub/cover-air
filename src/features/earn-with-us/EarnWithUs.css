@@ -6,7 +6,7 @@
 .earn-hero {
   position: relative;
   height: 600px;
-  background: #000000;
+  background: var(--black-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +65,7 @@
 }
 
 .earn-hero__btn--orange {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, var(--black-primary) 0%, #1a1a1a 100%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -75,7 +75,7 @@
 }
 
 .earn-hero__btn--cyan {
-  background: linear-gradient(135deg, #0ABAB5 0%, #089B96 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   box-shadow: 0 4px 20px rgba(10, 186, 181, 0.4);
 }
 
@@ -86,7 +86,7 @@
 
 /* Format Section */
 .earn-format {
-  background: #000000;
+  background: var(--black-primary);
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -159,14 +159,14 @@
 }
 
 .earn-format__icon--orange {
-  border-color: #000000;
-  color: #000000;
+  border-color: var(--black-primary);
+  color: var(--black-primary);
   background: rgba(255, 255, 255, 0.1);
 }
 
 .earn-format__icon--cyan {
-  border-color: #0ABAB5;
-  color: #0ABAB5;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .earn-format__label {

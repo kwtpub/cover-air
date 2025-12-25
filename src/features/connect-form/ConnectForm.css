@@ -81,7 +81,7 @@
 
 .connect-form__card {
   background: transparent;
-  border: 2px solid #0ABAB5;
+  border: 2px solid var(--primary);
   border-radius: 24px;
   padding: 40px;
   box-shadow: 0 4px 12px rgba(10, 186, 181, 0.3);
@@ -106,7 +106,7 @@
 .connect-form__field label {
   font-size: 14px;
   font-weight: 500;
-  color: #000;
+  color: var(--black-primary);
   display: none;
 }
 
@@ -121,7 +121,7 @@
 .connect-form__phone-prefix {
   padding: 14px 16px;
   background: #fff;
-  color: #000;
+  color: var(--black-primary);
   font-weight: 500;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
@@ -141,7 +141,7 @@
   border: none;
   font-size: 16px;
   outline: none;
-  color: #000;
+  color: var(--black-primary);
   background: #fff;
 }
 
@@ -153,7 +153,7 @@
   font-size: 16px;
   outline: none;
   background: #fff;
-  color: #000;
+  color: var(--black-primary);
 }
 
 .connect-form__field input::placeholder {
@@ -161,7 +161,7 @@
 }
 
 .connect-form__field select {
-  color: #000;
+  color: var(--black-primary);
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L0 0h12L6 8z' fill='%23000'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -175,7 +175,7 @@
   justify-content: center;
   gap: 8px;
   padding: 18px 32px;
-  background: #000;
+  background: var(--black-primary);
   color: #fff;
   font-size: 16px;
   font-weight: 600;
