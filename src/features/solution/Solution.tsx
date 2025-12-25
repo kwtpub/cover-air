@@ -42,14 +42,7 @@ const Solution = () => {
               <li key={index} className="solution__item">
                 <span className="solution__item-check">✓</span>
                 <div className="solution__item-content">
-                  {typeof item === 'string' ? (
-                    <span>{item}</span>
-                  ) : (
-                    <>
-                      <span>{item.text}</span>
-                      <strong className="solution__item-highlight">{item.highlight}</strong>
-                    </>
-                  )}
+                  <span>{item}</span>
                 </div>
               </li>
             ))}
