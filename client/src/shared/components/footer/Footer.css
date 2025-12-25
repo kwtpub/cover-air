@@ -200,48 +200,174 @@ h4 {
 
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 0 24px;
+    padding: 40px 0 20px;
   }
 
   .footer__container {
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
   .footer__main {
     grid-template-columns: 1fr;
-    gap: 32px;
-    text-align: center;
+    gap: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 20px;
+    text-align: left;
   }
 
   .footer__brand {
     grid-column: span 1;
   }
 
+  .footer__logo {
+    margin-bottom: 12px;
+  }
+
+  .footer__logo-text {
+    font-size: 24px;
+  }
+
+  .footer__tagline {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .footer__badges {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .footer__badge {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  h4 {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
   .footer__contacts {
-    align-items: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer__contact {
+    font-size: 14px;
+    gap: 10px;
   }
 
   .footer__address {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 13px;
+    margin-top: 4px;
+    gap: 10px;
   }
 
   .footer__nav {
-    align-items: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer__nav a {
+    font-size: 14px;
   }
 
   .footer__social-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .footer__social {
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .footer__social-link {
+    width: 40px;
+    height: 40px;
   }
 
   .footer__bottom {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+  }
+
+  .footer__legal {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .footer__legal a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 32px 0 16px;
+  }
+
+  .footer__container {
+    padding: 0 12px;
+  }
+
+  .footer__main {
+    gap: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 16px;
+  }
+
+  .footer__logo-text {
+    font-size: 22px;
+  }
+
+  .footer__tagline {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .footer__badge {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  h4 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .footer__contact {
+    font-size: 13px;
+  }
+
+  .footer__address {
+    font-size: 12px;
+  }
+
+  .footer__nav a {
+    font-size: 13px;
+  }
+
+  .footer__social-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer__copyright {
+    font-size: 11px;
+  }
+
+  .footer__legal a {
+    font-size: 11px;
   }
 }

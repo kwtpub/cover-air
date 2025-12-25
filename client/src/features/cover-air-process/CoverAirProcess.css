@@ -266,74 +266,220 @@
 
 @media (max-width: 768px) {
   .cover-air-process {
-    padding: 60px 16px;
+    padding: 40px 16px;
+  }
+
+  .cover-air-process::before {
+    width: 300px;
+    height: 300px;
   }
 
   .cover-air-process__container {
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
   }
 
   .cover-air-process__content {
     text-align: left;
+    width: 100%;
+  }
+
+  .cover-air-process__title {
+    font-size: clamp(24px, 5vw, 28px);
+    margin-bottom: 20px;
+  }
+
+  .cover-air-process__brand {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+
+  .cover-air-process__description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+
+  .cover-air-process__working-text {
+    font-size: 14px;
+    margin-bottom: 16px;
   }
 
   .cover-air-process__payment-systems {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-bottom: 24px;
   }
 
   .cover-air-process__payment-icon {
-    max-width: 70px;
-    max-height: 45px;
+    max-width: 60px;
+    max-height: 40px;
+  }
+
+  .cover-air-process__patent {
+    font-size: 12px;
+    text-align: center;
   }
 
   .cover-air-process__visual {
     justify-content: center;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .cover-air-process__steps-label {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
 
   .cover-air-process__visual-circles {
     display: flex;
     flex-direction: row;
-    gap: 3px;
+    gap: 8px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .cover-air-process__step-circle {
-    width: 95px;
-    height: 95px;
-    min-width: 95px;
-    min-height: 95px;
-    max-width: 95px;
-    max-height: 95px;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
     margin-top: 0;
+    border-width: 3px;
   }
 
   .cover-air-process__step-icon {
-    font-size: 26px;
+    font-size: 24px;
   }
   
   .cover-air-process__step-icon svg,
   .cover-air-process__step-icon img {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .cover-air-process__step-text {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-air-process {
+    padding: 32px 12px;
+  }
+
+  .cover-air-process__title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .cover-air-process__brand {
+    font-size: 22px;
+  }
+
+  .cover-air-process__description {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .cover-air-process__working-text {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .cover-air-process__payment-systems {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .cover-air-process__payment-icon {
+    max-width: 50px;
+    max-height: 35px;
+  }
+
+  .cover-air-process__patent {
+    font-size: 11px;
+  }
+  
+  .cover-air-process__steps-label {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .cover-air-process__visual-circles {
+    gap: 6px;
+  }
+
+  .cover-air-process__step-circle {
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    min-height: 85px;
+    max-width: 85px;
+    max-height: 85px;
+    border-width: 2px;
+  }
+
+  .cover-air-process__step-icon svg,
+  .cover-air-process__step-icon img {
+    width: 28px;
+    height: 28px;
   }
 
   .cover-air-process__step-text {
     font-size: 9px;
   }
-  
-  .cover-air-process__steps-label {
-    font-size: 13px;
-    margin-bottom: 16px;
-  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
+  .cover-air-process {
+    padding: 24px 12px;
+  }
+
+  .cover-air-process__title {
+    font-size: 20px;
+  }
+
+  .cover-air-process__brand {
+    font-size: 20px;
+  }
+
   .cover-air-process__payment-systems {
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .cover-air-process__payment-icon {
+    max-width: 45px;
+    max-height: 30px;
+  }
+
+  .cover-air-process__step-circle {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    min-height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .cover-air-process__step-icon svg,
+  .cover-air-process__step-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cover-air-process__step-text {
+    font-size: 8px;
   }
 }
 
