@@ -115,36 +115,40 @@ const FranchisePage = () => {
           <p className="franchise-questions__subtitle">
             Оставьте свои контакты и наш консультант свяжется с вами
           </p>
-          <form onSubmit={handleSubmit} className="franchise-questions__form">
-            <div className="franchise-questions__field">
-              <input
-                type="text"
-                placeholder="Имя"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="franchise-questions__field">
-              <div className="franchise-questions__phone-input">
-                <div className="franchise-questions__phone-prefix">
-                  <span className="franchise-questions__phone-flag">🇷🇺</span>
-                  <span>+7</span>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" style={{ marginLeft: '4px' }}>
-                    <path d="M6 8L0 0h12L6 8z" fill="#000"/>
-                  </svg>
-                </div>
+          
+          <div className="franchise-questions__card">
+            <form onSubmit={handleSubmit} className="franchise-questions__form">
+              <div className="franchise-questions__field">
+                <label>Имя</label>
                 <input
-                  type="tel"
-                  placeholder="(000) 000-00-00"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  type="text"
+                  placeholder="Имя"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
               </div>
-            </div>
-            <div className="franchise-questions__field">
-              <div className="franchise-questions__select-wrapper">
+              <div className="franchise-questions__field">
+                <label>Телефон</label>
+                <div className="franchise-questions__phone-input">
+                  <div className="franchise-questions__phone-prefix">
+                    <span className="franchise-questions__phone-flag">🇷🇺</span>
+                    <span>+7</span>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" style={{ marginLeft: '4px' }}>
+                      <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                    </svg>
+                  </div>
+                  <input
+                    type="tel"
+                    placeholder="(000) 000-00-00"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="franchise-questions__field">
+                <label>Способ связи</label>
                 <select
                   value={messenger}
                   onChange={(e) => setMessenger(e.target.value)}
@@ -155,24 +159,21 @@ const FranchisePage = () => {
                   <option value="Viber">Viber</option>
                   <option value="Звонок">Звонок</option>
                 </select>
-                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="franchise-questions__select-arrow">
-                  <path d="M6 8L0 0h12L6 8z" fill="#000"/>
-                </svg>
               </div>
-            </div>
-            <button 
-              type="submit" 
-              className="franchise-questions__submit"
-              disabled={isLoading}
-            >
-              {isLoading ? 'Отправка...' : 'Отправить'}
-            </button>
-            {message && (
-              <div className={`franchise-questions__message franchise-questions__message--${message.type}`}>
-                {message.text}
-              </div>
-            )}
-          </form>
+              <button 
+                type="submit" 
+                className="franchise-questions__submit"
+                disabled={isLoading}
+              >
+                {isLoading ? 'Отправка...' : 'Отправить'}
+              </button>
+              {message && (
+                <div className={`franchise-questions__message franchise-questions__message--${message.type}`}>
+                  {message.text}
+                </div>
+              )}
+            </form>
+          </div>
         </div>
       </section>
     </div>
