@@ -35,3 +35,4 @@ EXPOSE 3000
 # Запускаем приложение
 CMD ["node", "dist/index.js"]
 
+

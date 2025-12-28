@@ -66,34 +66,6 @@
   opacity: 0.9;
 }
 
-.header__social {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header__social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  color: var(--black-primary);
-  transition: all 0.2s ease;
-}
-
-.header__social-link svg {
-  width: 16px;
-  height: 16px;
-}
-
-.header__social-link:hover {
-  border-color: var(--primary-pink);
-  color: var(--primary-pink);
-}
-
 .header__burger {
   display: none;
   flex-direction: column;
@@ -171,10 +143,6 @@
 @media (max-width: 1024px) {
   .header__burger {
     display: flex;
-  }
-
-  .header__social {
-    display: none;
   }
 
   .header__nav {
