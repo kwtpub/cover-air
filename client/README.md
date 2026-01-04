@@ -1,19 +1,71 @@
-# React + TypeScript + Vite
+# COVER AIR - React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Фронтенд приложение для платформы COVER AIR, построенное на React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+## Доступные команды
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Разработка
+```bash
+npm run dev
+```
+Запускает сервер разработки с горячей перезагрузкой (HMR).
+- Приложение будет доступно по адресу: `http://localhost:5173`
+- Изменения в коде автоматически отображаются в браузере
+
+### Сборка проекта
+```bash
+npm run build
+```
+Собирает проект для production:
+1. Проверяет TypeScript типы (`tsc -b`)
+2. Создает оптимизированную сборку (`vite build`)
+3. Результат сохраняется в папку `dist/`
+
+### Линтинг
+```bash
+npm run lint
+```
+Проверяет код на соответствие стандартам ESLint.
+- Находит потенциальные ошибки
+- Проверяет стиль кода
+- Рекомендует улучшения
+
+### Предварительный просмотр
+```bash
+npm run preview
+```
+Запускает локальный сервер для просмотра production-сборки.
+- Используется после `npm run build`
+- Показывает, как приложение будет работать в production
+
+## Структура проекта
+
+```
+client/
+├── public/             # Статические файлы (изображения, иконки)
+├── src/
+│   ├── features/       # Компоненты функций (agent, international-payments и т.д.)
+│   ├── shared/         # Общие компоненты (header, footer, UI)
+│   ├── App.tsx         # Главный компонент приложения
+│   └── main.tsx        # Точка входа
+├── index.html          # HTML шаблон
+└── vite.config.ts      # Конфигурация Vite
+```
+
+## Технологии
+
+- **React 19** - Библиотека для создания UI
+- **TypeScript** - Типизированный JavaScript
+- **Vite** - Быстрый сборщик и dev-сервер
+- **ESLint** - Инструмент для проверки качества кода
 
 ## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React Compiler не включен в этот шаблон из-за влияния на производительность разработки и сборки. Для добавления см. [документацию](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Расширение конфигурации ESLint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Для production приложения рекомендуется обновить конфигурацию для включения type-aware lint правил:
 
 ```js
 export default defineConfig([
@@ -21,29 +73,29 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
+      // Другие конфиги...
 
-      // Remove tseslint.configs.recommended and replace with this
+      // Замените tseslint.configs.recommended на:
       tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
+      // Или используйте это для более строгих правил:
       tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
+      // Опционально добавьте стилистические правила:
       tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
+      // Другие конфиги...
     ],
     languageOptions: {
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
+      // другие опции...
     },
   },
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Также можно установить [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) и [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) для React-специфичных lint правил:
 
 ```js
 // eslint.config.js
@@ -55,10 +107,10 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Other configs...
-      // Enable lint rules for React
+      // Другие конфиги...
+      // Включить lint правила для React
       reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
+      // Включить lint правила для React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
@@ -66,7 +118,7 @@ export default defineConfig([
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
       },
-      // other options...
+      // другие опции...
     },
   },
 ])

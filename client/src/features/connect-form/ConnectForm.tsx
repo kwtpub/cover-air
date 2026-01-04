@@ -1,13 +1,16 @@
-import { useState } from 'react';
-import './ConnectForm.css';
-import { submitForm } from '../../shared/services/api';
+import { useState } from "react";
+import "./ConnectForm.css";
+import { submitForm } from "../../shared/services/api";
 
 const ConnectForm = () => {
-  const [phone, setPhone] = useState('');
-  const [messenger, setMessenger] = useState('WhatsApp');
-  const [promo, setPromo] = useState('');
+  const [phone, setPhone] = useState("");
+  const [messenger, setMessenger] = useState("WhatsApp");
+  const [promo, setPromo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [message, setMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,20 +25,23 @@ const ConnectForm = () => {
       });
 
       if (result.success) {
-        setMessage({ type: 'success', text: result.message || 'Заявка успешно отправлена!' });
-        setPhone('');
-        setMessenger('WhatsApp');
-        setPromo('');
+        setMessage({
+          type: "success",
+          text: result.message || "Заявка успешно отправлена!",
+        });
+        setPhone("");
+        setMessenger("WhatsApp");
+        setPromo("");
       } else {
-        setMessage({ 
-          type: 'error', 
-          text: result.message || 'Ошибка при отправке формы' 
+        setMessage({
+          type: "error",
+          text: result.message || "Ошибка при отправке формы",
         });
       }
     } catch (error) {
-      setMessage({ 
-        type: 'error', 
-        text: 'Не удалось отправить форму. Попробуйте позже.' 
+      setMessage({
+        type: "error",
+        text: "Не удалось отправить форму. Попробуйте позже.",
       });
     } finally {
       setIsLoading(false);
@@ -43,11 +49,11 @@ const ConnectForm = () => {
   };
 
   const steps = [
-    'Зарегистрируем документы.',
-    'Настроим подключение.',
-    'Создадим платежную страницу.',
-    'Обучим ваш персонал.',
-    'Бесплатно выдадим платежные модули.',
+    "Зарегистрируем документы.",
+    "Настроим подключение.",
+    "Создадим платежную страницу.",
+    "Обучим ваш персонал.",
+    "Бесплатно выдадим платежные модули.",
   ];
 
   return (
@@ -82,8 +88,14 @@ const ConnectForm = () => {
                 <div className="connect-form__phone-prefix">
                   <span className="connect-form__phone-flag">🇷🇺</span>
                   <span>+7</span>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" style={{ marginLeft: '4px' }}>
-                    <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                  <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    style={{ marginLeft: "4px" }}
+                  >
+                    <path d="M6 8L0 0h12L6 8z" fill="#000" />
                   </svg>
                 </div>
                 <input
@@ -118,15 +130,17 @@ const ConnectForm = () => {
               />
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="connect-form__submit"
               disabled={isLoading}
             >
-              {isLoading ? 'Отправка...' : 'Отправить'}
+              {isLoading ? "Отправка..." : "Отправить"}
             </button>
             {message && (
-              <div className={`connect-form__message connect-form__message--${message.type}`}>
+              <div
+                className={`connect-form__message connect-form__message--${message.type}`}
+              >
                 {message.text}
               </div>
             )}
@@ -142,4 +156,3 @@ const ConnectForm = () => {
 };
 
 export default ConnectForm;
-

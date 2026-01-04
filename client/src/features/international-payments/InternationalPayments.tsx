@@ -1,17 +1,20 @@
-import { useEffect, useState } from 'react';
-import './InternationalPayments.css';
-import { submitForm } from '../../shared/services/api';
+import { useEffect, useState } from "react";
+import "./InternationalPayments.css";
+import { submitForm } from "../../shared/services/api";
 
 const InternationalPayments = () => {
-  const [country, setCountry] = useState('');
-  const [amount, setAmount] = useState('');
-  const [phone, setPhone] = useState('');
-  const [messenger, setMessenger] = useState('WhatsApp');
+  const [country, setCountry] = useState("");
+  const [amount, setAmount] = useState("");
+  const [phone, setPhone] = useState("");
+  const [messenger, setMessenger] = useState("WhatsApp");
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [message, setMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,25 +26,31 @@ const InternationalPayments = () => {
       const result = await submitForm({
         phone,
         contactMethod: messenger,
-        promo: country && amount ? `Страна: ${country}, Сумма: ${amount}` : undefined,
+        promo:
+          country && amount
+            ? `Страна: ${country}, Сумма: ${amount}`
+            : undefined,
       });
 
       if (result.success) {
-        setMessage({ type: 'success', text: result.message || 'Заявка успешно отправлена!' });
-        setCountry('');
-        setAmount('');
-        setPhone('');
-        setMessenger('WhatsApp');
+        setMessage({
+          type: "success",
+          text: result.message || "Заявка успешно отправлена!",
+        });
+        setCountry("");
+        setAmount("");
+        setPhone("");
+        setMessenger("WhatsApp");
       } else {
-        setMessage({ 
-          type: 'error', 
-          text: result.message || 'Ошибка при отправке формы' 
+        setMessage({
+          type: "error",
+          text: result.message || "Ошибка при отправке формы",
         });
       }
     } catch (error) {
-      setMessage({ 
-        type: 'error', 
-        text: 'Не удалось отправить форму. Попробуйте позже.' 
+      setMessage({
+        type: "error",
+        text: "Не удалось отправить форму. Попробуйте позже.",
       });
     } finally {
       setIsLoading(false);
@@ -55,7 +64,8 @@ const InternationalPayments = () => {
         <div className="intl-hero__waves"></div>
         <div className="container">
           <h1 className="intl-hero__title">
-            Международные платежи<br />
+            Международные платежи
+            <br />
             для юридических и<br />
             физических лиц
           </h1>
@@ -63,7 +73,20 @@ const InternationalPayments = () => {
             Переводы, эквайринг, оплата за импорт и экспорт
           </p>
           <div className="intl-hero__button">
-            <a href="#request" className="intl-hero__btn">
+            <a
+              href="#request"
+              className="intl-hero__btn"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("request");
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }}
+            >
               Запрос на расчёт условий
             </a>
           </div>
@@ -76,23 +99,35 @@ const InternationalPayments = () => {
           <div className="intl-about__content">
             <div className="intl-about__text">
               <h2 className="intl-about__title">
-                Как работает <span className="intl-about__title-brand">COVER AIR</span>
+                Как работает{" "}
+                <img
+                  src="/images/ЛогоСАбир.png"
+                  alt="COVER AIR"
+                  className="intl-about__title-logo"
+                />
               </h2>
               <p>
-                <span className="intl-about__highlight">COVER AIR</span> ― платежное решение на базе международного платёжного сервиса <span className="intl-about__highlight">UDMPAY (UP)</span>. Мы помогаем юридическим и физическим лицам получать и отправлять платежи в любых странах 
-                с учётом всех законодательных требований.
+                <span className="intl-about__highlight">COVER AIR</span> ―
+                платежное решение на базе международного платёжного сервиса{" "}
+                <span className="intl-about__highlight">UDMPAY (UP)</span>. Мы
+                помогаем юридическим и физическим лицам получать и отправлять
+                платежи в любых странах с учётом всех законодательных
+                требований.
               </p>
               <p>
-                При международных расчётах UDMPAY (UP) выступает платёжным агентом, принимает от вас 
-                платёж в локальной валюте и переводит за вас денежные средства в другой стране в нужной 
-                вам валюте, при этом денежные средства не пересекают границу, что позволяет производить 
-                платежи даже при международных ограничениях.
+                При международных расчётах UDMPAY (UP) выступает платёжным
+                агентом, принимает от вас платёж в локальной валюте и переводит
+                за вас денежные средства в другой стране в нужной вам валюте,
+                при этом денежные средства не пересекают границу, что позволяет
+                производить платежи даже при международных ограничениях.
               </p>
             </div>
             <div className="intl-about__logo">
-              <div className="intl-about__logo-circle">
-                <span>UP</span>
-              </div>
+              <img
+                src="/images/Межд платежи-бир (1).png"
+                alt="Международные платежи"
+                className="intl-about__logo-img"
+              />
             </div>
           </div>
         </div>
@@ -102,7 +137,9 @@ const InternationalPayments = () => {
       <section className="intl-types">
         <div className="container">
           <h2 className="intl-types__title">
-            Какие виды платежей<br />мы поддерживаем
+            Какие виды платежей
+            <br />
+            мы поддерживаем
           </h2>
           <div className="intl-types__grid">
             <div className="intl-types__card intl-types__card--gray">
@@ -114,7 +151,8 @@ const InternationalPayments = () => {
             <div className="intl-types__card intl-types__card--black">
               <div className="intl-types__number">2</div>
               <p className="intl-types__text">
-                Международный эквайринг для оплаты товаров и услуг онлайн и на торговых точках
+                Международный эквайринг для оплаты товаров и услуг онлайн и на
+                торговых точках
               </p>
             </div>
             <div className="intl-types__card intl-types__card--cyan">
@@ -175,20 +213,28 @@ const InternationalPayments = () => {
                     <option value="Viber">Viber</option>
                     <option value="Звонок">Звонок</option>
                   </select>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="intl-request__select-arrow">
-                    <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                  <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    className="intl-request__select-arrow"
+                  >
+                    <path d="M6 8L0 0h12L6 8z" fill="#000" />
                   </svg>
                 </div>
               </div>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="intl-request__btn"
                 disabled={isLoading}
               >
-                {isLoading ? 'Отправка...' : 'Отправить'}
+                {isLoading ? "Отправка..." : "Отправить"}
               </button>
               {message && (
-                <div className={`intl-request__message intl-request__message--${message.type}`}>
+                <div
+                  className={`intl-request__message intl-request__message--${message.type}`}
+                >
                   {message.text}
                 </div>
               )}
@@ -201,5 +247,3 @@ const InternationalPayments = () => {
 };
 
 export default InternationalPayments;
-
-

@@ -1,17 +1,20 @@
-import { useEffect, useState } from 'react';
-import './AgentPage.css';
-import { submitForm } from '../../shared/services/api';
+import { useEffect, useState } from "react";
+import "./AgentPage.css";
+import { submitForm } from "../../shared/services/api";
 
 const AgentPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [messenger, setMessenger] = useState('WhatsApp');
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [messenger, setMessenger] = useState("WhatsApp");
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [message, setMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -26,24 +29,27 @@ const AgentPage = () => {
       });
 
       if (result.success) {
-        setMessage({ type: 'success', text: result.message || 'Заявка успешно отправлена!' });
-        setName('');
-        setPhone('');
-        setMessenger('WhatsApp');
+        setMessage({
+          type: "success",
+          text: result.message || "Заявка успешно отправлена!",
+        });
+        setName("");
+        setPhone("");
+        setMessenger("WhatsApp");
         setTimeout(() => {
           setIsModalOpen(false);
           setMessage(null);
         }, 2000);
       } else {
-        setMessage({ 
-          type: 'error', 
-          text: result.message || 'Ошибка при отправке формы' 
+        setMessage({
+          type: "error",
+          text: result.message || "Ошибка при отправке формы",
         });
       }
     } catch (error) {
-      setMessage({ 
-        type: 'error', 
-        text: 'Не удалось отправить форму. Попробуйте позже.' 
+      setMessage({
+        type: "error",
+        text: "Не удалось отправить форму. Попробуйте позже.",
       });
     } finally {
       setIsLoading(false);
@@ -86,19 +92,26 @@ const AgentPage = () => {
           <div className="agent-about__content">
             <div className="agent-about__text">
               <h2 className="agent-about__title">
-                Что такое <span className="agent-about__title-brand">COVER AIR</span>
+                Что такое{" "}
+                <img
+                  src="/images/ЛогоСАчерн.png"
+                  alt="COVER AIR"
+                  className="agent-about__title-logo"
+                />
               </h2>
               <p>
-                <span className="agent-about__highlight">COVER AIR</span> ― платежное решение на базе сервиса для приема платежей по QR-кодам и NFC <span className="agent-about__highlight">UDMPAY</span>. Мы создаем для организаций готовые онлайн-страницы. Технология не требует IT-разработки и смены банка. Для оплаты достаточно смартфона Apple или Android.
+                <span className="agent-about__highlight">COVER AIR</span> ―
+                платежное решение на базе сервиса для приема платежей по
+                QR-кодам и NFC UDMPAY. Мы создаем для организаций готовые
+                онлайн-страницы. Технология не требует IT-разработки и смены
+                банка. Для оплаты достаточно смартфона Apple или Android.
               </p>
               <p>
-                Сервис подходит для любых организаций, принимающих платежи от населения. Все технологии и методы патентуются, что исключает копирование конкурентами. Первый патент No2022685673 получен 27.12.2022, еще 11 ― на стадии оформления.
+                Сервис подходит для любых организаций, принимающих платежи от
+                населения. Все технологии и методы патентуются, что исключает
+                копирование конкурентами. Первый патент No2022685673 получен
+                27.12.2022, еще 11 ― на стадии оформления.
               </p>
-            </div>
-            <div className="agent-about__logo">
-              <div className="agent-about__logo-circle">
-                <span>CA</span>
-              </div>
             </div>
           </div>
         </div>
@@ -107,25 +120,29 @@ const AgentPage = () => {
       {/* How Agents Earn Section */}
       <section className="agent-earn">
         <div className="agent-earn__container">
-          <h2 className="agent-earn__title">
-            Как зарабатывают наши агенты
-          </h2>
-          
+          <h2 className="agent-earn__title">Как зарабатывают наши агенты</h2>
+
           <div className="agent-earn__steps">
             <div className="agent-earn__step-card agent-earn__step-card--pink">
               <div className="agent-earn__step-number">1</div>
               <div className="agent-earn__step-content">
-                <p>Вы привлекаете компании-клиентов, готовых принимать платежи через сервис UDMPAY.</p>
+                <p>
+                  Вы привлекаете компании-клиентов, готовых принимать платежи
+                  через сервис COVER AIR.
+                </p>
               </div>
             </div>
-            
+
             <div className="agent-earn__step-card agent-earn__step-card--orange">
               <div className="agent-earn__step-number">2</div>
               <div className="agent-earn__step-content">
-                <p>Мы настраиваем интеграцию с сервисом UDMPAY и создаем для компании индивидуальную платежную страницу.</p>
+                <p>
+                  Мы настраиваем интеграцию с сервисом COVER AIR и создаем для
+                  компании индивидуальную платежную страницу.
+                </p>
               </div>
             </div>
-            
+
             <div className="agent-earn__step-card agent-earn__step-card--cyan">
               <div className="agent-earn__step-number">3</div>
               <div className="agent-earn__step-content">
@@ -148,12 +165,15 @@ const AgentPage = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="agent-modal" onClick={handleCloseModal}>
-          <div className="agent-modal__content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="agent-modal__content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className="agent-modal__close" onClick={handleCloseModal}>
               ×
             </button>
             <h2 className="agent-modal__title">
-              Создайте пассивный доход с UDMPAY!
+              Создайте пассивный доход с COVER AIR!
             </h2>
             <p className="agent-modal__subtitle">
               Оставьте свои контакты и наш консультант пришлет все материалы
@@ -173,8 +193,14 @@ const AgentPage = () => {
                   <div className="agent-modal__phone-prefix">
                     <span className="agent-modal__phone-flag">🇷🇺</span>
                     <span>+7</span>
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" style={{ marginLeft: '4px' }}>
-                      <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                    <svg
+                      width="12"
+                      height="8"
+                      viewBox="0 0 12 8"
+                      fill="none"
+                      style={{ marginLeft: "4px" }}
+                    >
+                      <path d="M6 8L0 0h12L6 8z" fill="#000" />
                     </svg>
                   </div>
                   <input
@@ -198,20 +224,28 @@ const AgentPage = () => {
                     <option value="Viber">Viber</option>
                     <option value="Звонок">Звонок</option>
                   </select>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="agent-modal__select-arrow">
-                    <path d="M6 8L0 0h12L6 8z" fill="#000"/>
+                  <svg
+                    width="12"
+                    height="8"
+                    viewBox="0 0 12 8"
+                    fill="none"
+                    className="agent-modal__select-arrow"
+                  >
+                    <path d="M6 8L0 0h12L6 8z" fill="#000" />
                   </svg>
                 </div>
               </div>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="agent-modal__submit"
                 disabled={isLoading}
               >
-                {isLoading ? 'Отправка...' : 'Отправить'}
+                {isLoading ? "Отправка..." : "Отправить"}
               </button>
               {message && (
-                <div className={`agent-modal__message agent-modal__message--${message.type}`}>
+                <div
+                  className={`agent-modal__message agent-modal__message--${message.type}`}
+                >
                   {message.text}
                 </div>
               )}
@@ -224,4 +258,3 @@ const AgentPage = () => {
 };
 
 export default AgentPage;
-

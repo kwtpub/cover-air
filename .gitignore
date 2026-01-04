@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 example/
 docs/
+
+# bv (beads viewer) local config and caches
+.bv/

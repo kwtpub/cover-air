@@ -7,7 +7,11 @@ const Footer = () => {
         <div className="footer__main">
           <div className="footer__brand">
             <div className="footer__logo">
-              <span className="footer__logo-text">Cover Air</span>
+              <img
+                src="/images/ЛогоСАбир.png"
+                alt="Cover Air"
+                className="footer__logo-img"
+              />
             </div>
             <p className="footer__tagline">
               Сервис для приема платежей по QR-кодам и NFC
